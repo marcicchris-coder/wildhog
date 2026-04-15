@@ -58,8 +58,8 @@ function teamNeedsAttention(team) {
 
 function attentionReason(team) {
   if (team?.didNotFinish) return "DNF";
-  if (Number(team?.penaltySeconds || 0) > 0) return formatPenaltyMinutes(team.penaltySeconds);
-  if (team?.finishTime && !team?.startTime) return "Finish time missing start";
+  if (Number(team?.penaltySeconds || 0) > 0) return `Penalty: ${formatPenaltyMinutes(team.penaltySeconds)}`;
+  if (team?.finishTime && !team?.startTime) return "Missing start time";
   return "Needs review";
 }
 
@@ -196,12 +196,10 @@ function renderAttention(teams) {
     .filter(teamNeedsAttention)
     .sort((left, right) => normalizeBoat(left.boatNumber).localeCompare(normalizeBoat(right.boatNumber), undefined, { numeric: true }));
 
-  summary.textContent = rows.length
-    ? `${rows.length} team${rows.length === 1 ? "" : "s"} with penalties`
-    : "No teams with penalties";
+  summary.textContent = `${rows.length} flagged`;
 
   if (!rows.length) {
-    container.innerHTML = renderEmptyState("No teams with penalties right now.");
+    container.innerHTML = renderEmptyState("No flagged events right now.");
     return;
   }
 

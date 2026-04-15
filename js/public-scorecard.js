@@ -37,32 +37,23 @@ function normalizedCategory(team) {
   return normalizeCategoryName(team?.category || "Uncategorized");
 }
 
-function formatUpdatedPill(value) {
-  if (!value) return "Waiting for data";
+function formatUpdatedStatus(value) {
+  if (!value) return "Live Updates • Waiting for data";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "Waiting for data";
-  return `Last updated ${parsed.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}`;
-}
-
-function formatUpdatedCard(value) {
-  if (!value) return "--";
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "--";
-  return parsed.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+  if (Number.isNaN(parsed.getTime())) return "Live Updates • Waiting for data";
+  return `Live Updates • Updated ${parsed.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}`;
 }
 
 function setConnection(status, message) {
-  const pill = document.querySelector("#scorecard-connection-pill");
+  const pill = document.querySelector("#scorecard-status-pill");
   if (!pill) return;
   pill.dataset.status = status;
   pill.textContent = message;
 }
 
 function setUpdatedAt(value) {
-  const pill = document.querySelector("#scorecard-updated-pill");
-  const card = document.querySelector("#scorecard-summary-updated");
-  if (pill) pill.textContent = formatUpdatedPill(value);
-  if (card) card.textContent = formatUpdatedCard(value);
+  const pill = document.querySelector("#scorecard-status-pill");
+  if (pill) pill.textContent = formatUpdatedStatus(value);
 }
 
 function renderSummary(teams, updatedAt) {
@@ -269,12 +260,12 @@ function renderScorecard() {
   renderHighlightList(
     document.querySelector("#public-latest-finishers"),
     latestFinishers(teams),
-    "Finishers will appear here as boats cross the line.",
+    "No finishers recorded yet.",
   );
   renderHighlightList(
     document.querySelector("#public-top-overall"),
     topOverall(standings),
-    "Top overall standings will appear once finish times are posted.",
+    "Standings will appear as finish times are recorded.",
     true,
   );
   renderCategoryGroups(categoryGroups);
@@ -315,7 +306,7 @@ function bindCompactHeader() {
 async function refreshScorecard() {
   if (state.refreshInFlight) return;
   state.refreshInFlight = true;
-  setConnection("loading", "Checking feed");
+  setConnection("loading", state.payload ? formatUpdatedStatus(state.payload.state?.updatedAt || null) : "Live Updates • Waiting for data");
   try {
     const result = await fetchSnapshot(API_PATH, state.snapshotId);
     state.snapshotId = result.snapshotId || state.snapshotId;
@@ -323,9 +314,9 @@ async function refreshScorecard() {
       state.payload = result.payload;
       renderScorecard();
     }
-    setConnection("live", "Live updates");
+    setConnection("live", formatUpdatedStatus(state.payload?.state?.updatedAt || null));
   } catch {
-    setConnection("offline", "Feed offline");
+    setConnection("offline", "Live Updates • Feed offline");
   } finally {
     state.refreshInFlight = false;
   }
