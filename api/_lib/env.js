@@ -3,6 +3,11 @@ import path from "node:path";
 
 let localEnvLoaded = false;
 
+const ENV_ALIASES = new Map([
+  ["SUPABASE_URL", ["NEXT_PUBLIC_SUPABASE_URL"]],
+  ["SUPABASE_PUBLISHABLE_KEY", ["NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"]],
+]);
+
 export function loadLocalEnvFile() {
   if (localEnvLoaded) return;
   localEnvLoaded = true;
@@ -37,7 +42,14 @@ export function loadLocalEnvFile() {
 export function readEnv(name, fallback = "") {
   loadLocalEnvFile();
   const value = process.env[name];
-  return value == null || value === "" ? fallback : String(value);
+  if (value != null && value !== "") return String(value);
+
+  const aliases = ENV_ALIASES.get(name) || [];
+  for (const alias of aliases) {
+    const aliasedValue = process.env[alias];
+    if (aliasedValue != null && aliasedValue !== "") return String(aliasedValue);
+  }
+  return fallback;
 }
 
 export function readEnvFlag(name, fallback = false) {
