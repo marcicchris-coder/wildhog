@@ -1,0 +1,8 @@
+{
+  "name": "wild-hog-canoe-race-timekeeper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}

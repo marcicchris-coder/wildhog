@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wild Hog Coordinator Board</title>
+  <link rel="stylesheet" href="coordinator.css?v=20260409-1" />
+</head>
+<body>
+  <header class="board-header">
+    <div>
+      <p class="eyebrow">Wild Hog Canoe Race</p>
+      <h1>Coordinator Board</h1>
+      <p class="subtitle">Read-only roster, launch, and finish tracking for race staff.</p>
+    </div>
+    <div class="header-actions">
+      <button type="button" id="refresh-button" class="header-button">Refresh</button>
+      <div id="connection-pill" class="pill" data-status="loading">Connecting</div>
+      <div id="updated-pill" class="pill pill-muted">Waiting for data</div>
+    </div>
+  </header>
+
+  <main class="board-shell">
+    <section class="summary-grid" id="summary-grid">
+      <article class="summary-card">
+        <span class="summary-label">Teams</span>
+        <strong id="summary-total">0</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Checked In</span>
+        <strong id="summary-checked-in">0</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Racing</span>
+        <strong id="summary-racing">0</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Finished</span>
+        <strong id="summary-finished">0</strong>
+      </article>
+    </section>
+
+    <section class="toolbar">
+      <label class="toolbar-field toolbar-search">
+        <span>Search</span>
+        <input id="search-input" type="search" placeholder="Boat, racer, or category" autocomplete="off" />
+      </label>
+
+      <label class="toolbar-field">
+        <span>Status</span>
+        <select id="status-filter">
+          <option value="all">All statuses</option>
+          <option value="registered">Registered</option>
+          <option value="ready">Ready</option>
+          <option value="racing">Racing</option>
+          <option value="finished">Finished</option>
+          <option value="dnf">DNF</option>
+        </select>
+      </label>
+
+      <label class="toolbar-field">
+        <span>Category</span>
+        <select id="category-filter">
+          <option value="all">All categories</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="board-card">
+      <div class="table-header">
+        <h2>Race Roster</h2>
+        <p id="table-summary">0 teams shown</p>
+      </div>
+      <div class="table-wrap">
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th>Boat</th>
+              <th>Racers</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Finish</th>
+              <th>Penalty</th>
+            </tr>
+          </thead>
+          <tbody id="board-table-body">
+            <tr>
+              <td colspan="7" class="empty-cell">Loading coordinator data...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="coordinator.js?v=20260415-1"></script>
+</body>
+</html>

@@ -1,0 +1,2655 @@
+{
+  "source": "2025 Wildhog Scorecard.xlsm",
+  "teamCount": 193,
+  "teams": [
+    {
+      "boatNumber": "01",
+      "racer1": {
+        "first": "Chris",
+        "last": "Owens"
+      },
+      "racer2": {
+        "first": "Tres",
+        "last": "Owens"
+      },
+      "category": "Parent/Youth",
+      "phone": "3529495622",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "02",
+      "racer1": {
+        "first": "Robert",
+        "last": "R. Norman"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3522012468",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "03",
+      "racer1": {
+        "first": "Jason",
+        "last": "Larkin"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3157839167",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "04",
+      "racer1": {
+        "first": "Michelle",
+        "last": "Goode"
+      },
+      "racer2": {
+        "first": "Jessica",
+        "last": "Sharkey"
+      },
+      "category": "Women's",
+      "phone": "3522090269",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "05",
+      "racer1": {
+        "first": "William",
+        "last": "Svenstrup"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "5164488797",
+      "checkedIn": false,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "06",
+      "racer1": {
+        "first": "Liz",
+        "last": "Baillie"
+      },
+      "racer2": null,
+      "category": "Women's",
+      "phone": "3529497685",
+      "checkedIn": false,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "07",
+      "racer1": {
+        "first": "Shera",
+        "last": "Childress"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8503808993",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "08",
+      "racer1": {
+        "first": "Holley",
+        "last": "H. Daniel"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8502327457",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "09",
+      "racer1": {
+        "first": "Shelby",
+        "last": "Strickland"
+      },
+      "racer2": {
+        "first": "Taylor",
+        "last": "Joyner"
+      },
+      "category": "Women's",
+      "phone": "3522757172",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "10",
+      "racer1": {
+        "first": "Rosemary",
+        "last": "Stringer"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3522840318",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "11",
+      "racer1": {
+        "first": "Matt",
+        "last": "Abel"
+      },
+      "racer2": {
+        "first": "Kell",
+        "last": "Bliss"
+      },
+      "category": "Mixed",
+      "phone": "3018217295",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "12",
+      "racer1": {
+        "first": "Patty",
+        "last": "Polk"
+      },
+      "racer2": {
+        "first": "David",
+        "last": "Holton"
+      },
+      "category": "Senior",
+      "phone": "3525381598",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "13",
+      "racer1": {
+        "first": "Jesse",
+        "last": "Cook"
+      },
+      "racer2": {
+        "first": "Samantha",
+        "last": "Beckham"
+      },
+      "category": "Parent/Youth",
+      "phone": "3522104068",
+      "checkedIn": false,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "14",
+      "racer1": {
+        "first": "Robert",
+        "last": "Watson"
+      },
+      "racer2": {
+        "first": "Ruby Logan",
+        "last": "Drakon"
+      },
+      "category": "Mixed",
+      "phone": "9375369295",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "15",
+      "racer1": {
+        "first": "Trisha",
+        "last": "Michelle"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "4077650054",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "16",
+      "racer1": {
+        "first": "Kassi",
+        "last": "Lasseter"
+      },
+      "racer2": {
+        "first": "Ashley",
+        "last": "Vazquez"
+      },
+      "category": "Women's",
+      "phone": "7272672679",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "17",
+      "racer1": {
+        "first": "Victoria",
+        "last": "Sanderson"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3523220355",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "18",
+      "racer1": {
+        "first": "Teresa",
+        "last": "Hamilton"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "9048037006",
+      "checkedIn": false,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "19",
+      "racer1": {
+        "first": "Lisa",
+        "last": "Young"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "3214242210",
+      "checkedIn": false,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "20",
+      "racer1": {
+        "first": "Terry",
+        "last": "Owens"
+      },
+      "racer2": null,
+      "category": "One-man Canoe",
+      "phone": "3523394828",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "21",
+      "racer1": {
+        "first": "Gary",
+        "last": "Koch"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "8027607524",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "22",
+      "racer1": {
+        "first": "Chase",
+        "last": "Provencher"
+      },
+      "racer2": {
+        "first": "Magda",
+        "last": "Provencher"
+      },
+      "category": "Mixed",
+      "phone": "7865541076",
+      "checkedIn": true,
+      "paidStatus": "Paid"
+    },
+    {
+      "boatNumber": "23",
+      "racer1": {
+        "first": "Billy",
+        "last": "Locy"
+      },
+      "racer2": {
+        "first": "Kelsey",
+        "last": "Johnson"
+      },
+      "category": "Mixed",
+      "phone": "7278045527",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "24",
+      "racer1": {
+        "first": "Josh",
+        "last": "Simpson"
+      },
+      "racer2": {
+        "first": "Shane",
+        "last": "Smith"
+      },
+      "category": "Recreation",
+      "phone": "3863656200",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "25",
+      "racer1": {
+        "first": "Katie",
+        "last": "O'Dom"
+      },
+      "racer2": {
+        "first": "Nick",
+        "last": "Watson"
+      },
+      "category": "Mixed",
+      "phone": "7276120901",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "26",
+      "racer1": {
+        "first": "Kathryn",
+        "last": "Opp"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8138340842",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "27",
+      "racer1": {
+        "first": "Jessie",
+        "last": "DeShazer"
+      },
+      "racer2": {
+        "first": "Gabi",
+        "last": "Padron"
+      },
+      "category": "Women's",
+      "phone": "7863404759",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "28",
+      "racer1": {
+        "first": "Jordan",
+        "last": "Militello"
+      },
+      "racer2": {
+        "first": "Robert",
+        "last": "Forsythe"
+      },
+      "category": "Mixed",
+      "phone": "7244945550",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "29",
+      "racer1": {
+        "first": "Jen",
+        "last": "DeYoung"
+      },
+      "racer2": null,
+      "category": "One-man Canoe",
+      "phone": "8634640105",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "30",
+      "racer1": {
+        "first": "john",
+        "last": "Leese"
+      },
+      "racer2": null,
+      "category": "One-man Canoe",
+      "phone": "8137875733",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "31",
+      "racer1": {
+        "first": "Wendy",
+        "last": "Davide"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "4077339001",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "32",
+      "racer1": {
+        "first": "Brett",
+        "last": "Stump"
+      },
+      "racer2": {
+        "first": "Noah",
+        "last": "Caravetto"
+      },
+      "category": "Recreation",
+      "phone": "3523900289",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "33",
+      "racer1": {
+        "first": "Jackson",
+        "last": "Cyrier"
+      },
+      "racer2": {
+        "first": "Larry",
+        "last": "Cyrier"
+      },
+      "category": "Recreation",
+      "phone": "8153550097",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "34",
+      "racer1": {
+        "first": "Logan",
+        "last": "Doll"
+      },
+      "racer2": {
+        "first": "Jarrod",
+        "last": "Doll"
+      },
+      "category": "Recreation",
+      "phone": "8505096012",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "35",
+      "racer1": {
+        "first": "James",
+        "last": "Mclaughlin"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "9044345686",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "36",
+      "racer1": {
+        "first": "Dane",
+        "last": "Digeronimo"
+      },
+      "racer2": null,
+      "category": "Recreation",
+      "phone": "2163394218",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "37",
+      "racer1": {
+        "first": "Austin",
+        "last": "Fowler"
+      },
+      "racer2": {
+        "first": "Brett",
+        "last": "Hendrix"
+      },
+      "category": "Recreation",
+      "phone": "3526010392",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "38",
+      "racer1": {
+        "first": "Caleb",
+        "last": "Canova"
+      },
+      "racer2": {
+        "first": "Micah",
+        "last": "Smith"
+      },
+      "category": "Youth",
+      "phone": "3523029479",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "39",
+      "racer1": {
+        "first": "Samuel",
+        "last": "S. Canova"
+      },
+      "racer2": {
+        "first": "Simeon",
+        "last": "S. Smith"
+      },
+      "category": "Youth",
+      "phone": "3522578160",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "40",
+      "racer1": {
+        "first": "Joseph",
+        "last": "J. Canova"
+      },
+      "racer2": {
+        "first": "Titus",
+        "last": "T. Smith"
+      },
+      "category": "Recreation",
+      "phone": "3522578160",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "41",
+      "racer1": {
+        "first": "Sage",
+        "last": "Gilbert"
+      },
+      "racer2": {
+        "first": "Jennifer",
+        "last": "Watson"
+      },
+      "category": "Women's",
+      "phone": "6162927511",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "42",
+      "racer1": {
+        "first": "LaTanja",
+        "last": "Taylor"
+      },
+      "racer2": {
+        "first": "Dawn",
+        "last": "Harris"
+      },
+      "category": "Women's",
+      "phone": "5615749030",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "43",
+      "racer1": {
+        "first": "Shelly",
+        "last": "Armstrong"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "7327733815",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "44",
+      "racer1": {
+        "first": "Lisa",
+        "last": "Dancel"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3523969527",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "45",
+      "racer1": {
+        "first": "Karen",
+        "last": "Songdahl"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "3059518046",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "46",
+      "racer1": {
+        "first": "Marlou",
+        "last": "Bezems"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "2398964411",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "47",
+      "racer1": {
+        "first": "Jennifer",
+        "last": "Flanigan"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "8506125211",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "48",
+      "racer1": {
+        "first": "Scott",
+        "last": "Mize"
+      },
+      "racer2": {
+        "first": "Mark",
+        "last": "Kunkle"
+      },
+      "category": "Senior",
+      "phone": "9412754907",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "49",
+      "racer1": {
+        "first": "Judith",
+        "last": "Herron"
+      },
+      "racer2": {
+        "first": "Isabel",
+        "last": "McNulty"
+      },
+      "category": "Women's",
+      "phone": "3522264217",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "50",
+      "racer1": {
+        "first": "Spencer",
+        "last": "Cole"
+      },
+      "racer2": {
+        "first": "Trevor",
+        "last": "Cole"
+      },
+      "category": "Parent/Youth",
+      "phone": "7274816115",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "51",
+      "racer1": {
+        "first": "Polly",
+        "last": "Haldeman"
+      },
+      "racer2": {
+        "first": "Marissa",
+        "last": "DeHaven"
+      },
+      "category": "Women's",
+      "phone": "3529490898",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "52",
+      "racer1": {
+        "first": "Aaron",
+        "last": "Haldeman"
+      },
+      "racer2": {
+        "first": "Wayland",
+        "last": "Beckham"
+      },
+      "category": "Recreation",
+      "phone": "3529491110",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "53",
+      "racer1": {
+        "first": "Sadie",
+        "last": "Haldeman"
+      },
+      "racer2": {
+        "first": "Evan",
+        "last": "Thomas"
+      },
+      "category": "Parent/Youth",
+      "phone": "3529490898",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "54",
+      "racer1": {
+        "first": "Starchild",
+        "last": "Unicorn"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "2397779691",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "55",
+      "racer1": {
+        "first": "Laurence",
+        "last": "Shaw"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "8508601657",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "56",
+      "racer1": {
+        "first": "Debbie",
+        "last": "Lambert"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "8503848401",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "57",
+      "racer1": {
+        "first": "Eve",
+        "last": "Pallone"
+      },
+      "racer2": {
+        "first": "Billy",
+        "last": "Butler"
+      },
+      "category": "Mixed",
+      "phone": "3522224987",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "58",
+      "racer1": {
+        "first": "James",
+        "last": "Scott"
+      },
+      "racer2": {
+        "first": "James Jr",
+        "last": "Scott"
+      },
+      "category": "Parent/Youth",
+      "phone": "3523616566",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "59",
+      "racer1": {
+        "first": "Micah",
+        "last": "Tavernari"
+      },
+      "racer2": {
+        "first": "Josiah",
+        "last": "Tavernari"
+      },
+      "category": "Recreation",
+      "phone": "3526817291",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "60",
+      "racer1": {
+        "first": "Chrissy",
+        "last": "Williams"
+      },
+      "racer2": {
+        "first": "Amanda",
+        "last": "Simmons"
+      },
+      "category": "Women's",
+      "phone": "3522106270",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "61",
+      "racer1": {
+        "first": "Henry",
+        "last": "Matthews"
+      },
+      "racer2": {
+        "first": "Gabby",
+        "last": "Fisher"
+      },
+      "category": "Mixed",
+      "phone": "8133751706",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "62",
+      "racer1": {
+        "first": "James",
+        "last": "Triplett"
+      },
+      "racer2": {
+        "first": "Rhonda",
+        "last": "Triplett"
+      },
+      "category": "Mixed",
+      "phone": "7578790851",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "64",
+      "racer1": {
+        "first": "Ainhoa",
+        "last": "Barturen"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "9419287313",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "65",
+      "racer1": {
+        "first": "Ephraim",
+        "last": "Maxson"
+      },
+      "racer2": {
+        "first": "Silas",
+        "last": "Giminez"
+      },
+      "category": "Youth",
+      "phone": "3522561552",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "66",
+      "racer1": {
+        "first": "Ben",
+        "last": "Maxson"
+      },
+      "racer2": {
+        "first": "Cherish",
+        "last": "Maxson"
+      },
+      "category": "Parent/Youth",
+      "phone": "3525196024",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "67",
+      "racer1": {
+        "first": "David",
+        "last": "Jenkins"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "3522835382",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "68",
+      "racer1": {
+        "first": "Amanda",
+        "last": "Banks"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "4079235897",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "69",
+      "racer1": {
+        "first": "Michelle",
+        "last": "Belcher"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3522627672",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "70",
+      "racer1": {
+        "first": "Mary-Joy",
+        "last": "Monsalud"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "6092020628",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "71",
+      "racer1": {
+        "first": "Thomas",
+        "last": "Harder"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "3467759298",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "72",
+      "racer1": {
+        "first": "Yulia",
+        "last": "Piatek"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "2247239869",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "73",
+      "racer1": {
+        "first": "Trey",
+        "last": "Banda"
+      },
+      "racer2": {
+        "first": "Joey",
+        "last": "McCue"
+      },
+      "category": "Recreation",
+      "phone": "3523453326",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "74",
+      "racer1": {
+        "first": "Nathan",
+        "last": "Sims"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "8646502652",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "75",
+      "racer1": {
+        "first": "Wesley",
+        "last": "Mercier"
+      },
+      "racer2": {
+        "first": "Tate",
+        "last": "Luckie"
+      },
+      "category": "Youth",
+      "phone": "2294255720",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "76",
+      "racer1": {
+        "first": "Brad",
+        "last": "B. Mercier"
+      },
+      "racer2": {
+        "first": "Evan",
+        "last": "E. Mercier"
+      },
+      "category": "Parent/Youth",
+      "phone": "2294255720",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "77",
+      "racer1": {
+        "first": "Allan",
+        "last": "A. Mercier"
+      },
+      "racer2": {
+        "first": "Ben",
+        "last": "B. Mercier"
+      },
+      "category": "Youth",
+      "phone": "2294255720",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "78",
+      "racer1": {
+        "first": "Courtney",
+        "last": "Lecompte"
+      },
+      "racer2": {
+        "first": "Wyatt",
+        "last": "Lecompte"
+      },
+      "category": "Parent/Youth",
+      "phone": "3526971371",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "79",
+      "racer1": {
+        "first": "Bill",
+        "last": "Baumann"
+      },
+      "racer2": {
+        "first": "Bobby",
+        "last": "Baumann"
+      },
+      "category": "Recreation",
+      "phone": "3526609515",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "80",
+      "racer1": {
+        "first": "Kelly",
+        "last": "Forbes"
+      },
+      "racer2": {
+        "first": "Harrison",
+        "last": "Forbes"
+      },
+      "category": "Mixed",
+      "phone": "8147690310",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "81",
+      "racer1": {
+        "first": "Bonnie",
+        "last": "Hagan"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3522105789",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "82",
+      "racer1": {
+        "first": "Mary",
+        "last": "Schneider"
+      },
+      "racer2": {
+        "first": "Elle",
+        "last": "Hosto"
+      },
+      "category": "Women's",
+      "phone": "8135085962",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "83",
+      "racer1": {
+        "first": "Katelyn",
+        "last": "Myers"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "2533123074",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "84",
+      "racer1": {
+        "first": "Nicole",
+        "last": "Nicole"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3526147620",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "85",
+      "racer1": {
+        "first": "Sarah",
+        "last": "Jowsey"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3523630950",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "86",
+      "racer1": {
+        "first": "John",
+        "last": "Davies"
+      },
+      "racer2": {
+        "first": "Margaret",
+        "last": "Davies"
+      },
+      "category": "Mixed",
+      "phone": "2054053228",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "87",
+      "racer1": {
+        "first": "Richard",
+        "last": "Nico"
+      },
+      "racer2": {
+        "first": "River",
+        "last": "Nico"
+      },
+      "category": "Parent/Youth",
+      "phone": "3864380155",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "88",
+      "racer1": {
+        "first": "David",
+        "last": "Nettles"
+      },
+      "racer2": {
+        "first": "Vyrdani",
+        "last": "Powers"
+      },
+      "category": "Parent/Youth",
+      "phone": "3524422551",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "89",
+      "racer1": {
+        "first": "Buddy",
+        "last": "Buddy Baumann"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "4079482469",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "90",
+      "racer1": {
+        "first": "Brooke",
+        "last": "Brooke Baumann"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "7274241705",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "91",
+      "racer1": {
+        "first": "Marion",
+        "last": "Palomino"
+      },
+      "racer2": {
+        "first": "James",
+        "last": "dargocey"
+      },
+      "category": "Senior",
+      "phone": "7276421334",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "92",
+      "racer1": {
+        "first": "Buddy",
+        "last": "Buddy"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "8505667068",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "93",
+      "racer1": {
+        "first": "Amanda",
+        "last": "Maltbey"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "7158929102",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "94",
+      "racer1": {
+        "first": "Janet",
+        "last": "Daughhetee"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "5133786572",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "95",
+      "racer1": {
+        "first": "Brook",
+        "last": "Mercier"
+      },
+      "racer2": {
+        "first": "Kate",
+        "last": "Mercier"
+      },
+      "category": "Parent/Youth",
+      "phone": "3523163948",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "96",
+      "racer1": {
+        "first": "Mason",
+        "last": "Murphy"
+      },
+      "racer2": {
+        "first": "Ashley",
+        "last": "Hoffman"
+      },
+      "category": "Mixed",
+      "phone": "3528603442",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "97",
+      "racer1": {
+        "first": "Sue",
+        "last": "Pitra"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3012043529",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "98",
+      "racer1": {
+        "first": "Daniel",
+        "last": "Grantland"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "3866316780",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "99",
+      "racer1": {
+        "first": "Joel",
+        "last": "Herron"
+      },
+      "racer2": {
+        "first": "Julia",
+        "last": "Herron"
+      },
+      "category": "Parent/Youth",
+      "phone": "3522841614",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "100",
+      "racer1": {
+        "first": "Jaxon",
+        "last": "Epting"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "5186981618",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "101",
+      "racer1": {
+        "first": "Cassie",
+        "last": "Miles"
+      },
+      "racer2": {
+        "first": "Ruth",
+        "last": "King"
+      },
+      "category": "Women's",
+      "phone": "3523160764",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "102",
+      "racer1": {
+        "first": "Shea",
+        "last": "Whitacre"
+      },
+      "racer2": {
+        "first": "Haydn",
+        "last": "Rhodes"
+      },
+      "category": "Mixed",
+      "phone": "5614452609",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "103",
+      "racer1": {
+        "first": "Mary",
+        "last": "Willer"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "7722151196",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "104",
+      "racer1": {
+        "first": "Kevin",
+        "last": "Willaman"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "5614455991",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "105",
+      "racer1": {
+        "first": "Robert",
+        "last": "Bieber"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "9417446620",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "106",
+      "racer1": {
+        "first": "Chris",
+        "last": "Logan"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "6369001186",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "107",
+      "racer1": {
+        "first": "John III",
+        "last": "Buys"
+      },
+      "racer2": {
+        "first": "Adam",
+        "last": "Kirkland"
+      },
+      "category": "Recreation",
+      "phone": "3522261384",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "108",
+      "racer1": {
+        "first": "Jesse",
+        "last": "Woodward"
+      },
+      "racer2": {
+        "first": "Lilly",
+        "last": "Woodward"
+      },
+      "category": "Paddle Board",
+      "phone": "3023962979",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "109",
+      "racer1": {
+        "first": "Olivia",
+        "last": "Stiles"
+      },
+      "racer2": {
+        "first": "Christopher",
+        "last": "Segars"
+      },
+      "category": "Youth",
+      "phone": "7275037889",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "110",
+      "racer1": {
+        "first": "David",
+        "last": "Sadlon"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3868012104",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "111",
+      "racer1": {
+        "first": "Lori",
+        "last": "Sadlon"
+      },
+      "racer2": {
+        "first": "Jerry",
+        "last": "Watts"
+      },
+      "category": "Recreation",
+      "phone": "3868012104",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "112",
+      "racer1": {
+        "first": "Douglas",
+        "last": "Steigerwalt"
+      },
+      "racer2": {
+        "first": "James",
+        "last": "Welch"
+      },
+      "category": "Recreation",
+      "phone": "3529490630",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "113",
+      "racer1": {
+        "first": "Kayla",
+        "last": "Casson"
+      },
+      "racer2": {
+        "first": "Kendall",
+        "last": "Meeks"
+      },
+      "category": "Women's",
+      "phone": "3528759622",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "114",
+      "racer1": {
+        "first": "Nicholas",
+        "last": "Seidel"
+      },
+      "racer2": {
+        "first": "John",
+        "last": "Saint"
+      },
+      "category": "Recreation",
+      "phone": "3523423578",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "115",
+      "racer1": {
+        "first": "Hana",
+        "last": "Dukes"
+      },
+      "racer2": {
+        "first": "Tina",
+        "last": "Mendoza"
+      },
+      "category": "Women's",
+      "phone": "3523189192",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "116",
+      "racer1": {
+        "first": "Luka",
+        "last": "L. Daniel"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8502327457",
+      "checkedIn": false,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "117",
+      "racer1": {
+        "first": "Charlotte",
+        "last": "Dow"
+      },
+      "racer2": {
+        "first": "Heather",
+        "last": "Stancil"
+      },
+      "category": "Women's",
+      "phone": "3522565274",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "118",
+      "racer1": {
+        "first": "LeMegan",
+        "last": "Herroon"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8507664005",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "119",
+      "racer1": {
+        "first": "John",
+        "last": "Coker"
+      },
+      "racer2": {
+        "first": "Miguel",
+        "last": "Contreras"
+      },
+      "category": "Recreation",
+      "phone": "7272511388",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "120",
+      "racer1": {
+        "first": "Jason",
+        "last": "Thompson"
+      },
+      "racer2": {
+        "first": "Sean",
+        "last": "Tate"
+      },
+      "category": "Recreation",
+      "phone": "3528704974",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "121",
+      "racer1": {
+        "first": "Martin",
+        "last": "Herron"
+      },
+      "racer2": {
+        "first": "Job",
+        "last": "Herron"
+      },
+      "category": "Recreation",
+      "phone": "3522841614",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "122",
+      "racer1": {
+        "first": "George",
+        "last": "Garner"
+      },
+      "racer2": {
+        "first": "Zachary",
+        "last": "Garner"
+      },
+      "category": "Parent/Youth",
+      "phone": "8134841699",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "123",
+      "racer1": {
+        "first": "Brooke",
+        "last": "Beers"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "3528044805",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "124",
+      "racer1": {
+        "first": "Nate",
+        "last": "Lovelace"
+      },
+      "racer2": {
+        "first": "Trey",
+        "last": "Sanchez"
+      },
+      "category": "Recreation",
+      "phone": "3522211318",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "125",
+      "racer1": {
+        "first": "Amy",
+        "last": "Hebron"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "126",
+      "racer1": {
+        "first": "Linda",
+        "last": "Harrison"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "127",
+      "racer1": {
+        "first": "Mike",
+        "last": "Malone"
+      },
+      "racer2": {
+        "first": "Bobby",
+        "last": "Johnson"
+      },
+      "category": "Experienced",
+      "phone": "7272156563",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "128",
+      "racer1": {
+        "first": "Salli",
+        "last": "O'Donnell"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "7574393010",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "129",
+      "racer1": {
+        "first": "Bill",
+        "last": "Blackham"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "130",
+      "racer1": {
+        "first": "Catherine",
+        "last": "Neuoff"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "5865650080",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "131",
+      "racer1": {
+        "first": "Danny",
+        "last": "Stevens JR"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3522864623",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "132",
+      "racer1": {
+        "first": "Aaron",
+        "last": "Begin"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3523166960",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "133",
+      "racer1": {
+        "first": "Tim",
+        "last": "Stiles"
+      },
+      "racer2": {
+        "first": "Zellie",
+        "last": "Stiles"
+      },
+      "category": "Parent/Youth",
+      "phone": "7275049880",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "134",
+      "racer1": {
+        "first": "Charles",
+        "last": "Simpson"
+      },
+      "racer2": {
+        "first": "Olivia",
+        "last": "Simpson"
+      },
+      "category": "Parent/Youth",
+      "phone": "3523615503",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "135",
+      "racer1": {
+        "first": "Jonathan",
+        "last": "Spann"
+      },
+      "racer2": {
+        "first": "Cole",
+        "last": "Rollinson"
+      },
+      "category": "Recreation",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "136",
+      "racer1": {
+        "first": "Thomas",
+        "last": "Dudeck"
+      },
+      "racer2": {
+        "first": "Foster",
+        "last": "Hawthorne"
+      },
+      "category": "Recreation",
+      "phone": "3526650713",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "137",
+      "racer1": {
+        "first": "Seth",
+        "last": "S. Werner"
+      },
+      "racer2": {
+        "first": "Cason",
+        "last": "C. Werner"
+      },
+      "category": "Recreation",
+      "phone": "7049572172",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "138",
+      "racer1": {
+        "first": "Ace",
+        "last": "Haddock"
+      },
+      "racer2": {
+        "first": "Seth",
+        "last": "Coffin"
+      },
+      "category": "Recreation",
+      "phone": "8505672725",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "139",
+      "racer1": {
+        "first": "William",
+        "last": "Sowers"
+      },
+      "racer2": {
+        "first": "Oliver",
+        "last": "Vinas"
+      },
+      "category": "Recreation",
+      "phone": "9108501874",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "140",
+      "racer1": {
+        "first": "Peter",
+        "last": "Cowdrey"
+      },
+      "racer2": {
+        "first": "Matt",
+        "last": "Cowdrey"
+      },
+      "category": "Recreation",
+      "phone": "8505597774",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "141",
+      "racer1": {
+        "first": "Austin",
+        "last": "Rush"
+      },
+      "racer2": {
+        "first": "Nicholas",
+        "last": "Davidson"
+      },
+      "category": "Recreation",
+      "phone": "3214321757",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "142",
+      "racer1": {
+        "first": "Ted",
+        "last": "T. Werner"
+      },
+      "racer2": {
+        "first": "Mary",
+        "last": "M. Werner"
+      },
+      "category": "Mixed",
+      "phone": "7048778647",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "143",
+      "racer1": {
+        "first": "Rama",
+        "last": "Shuster"
+      },
+      "racer2": {
+        "first": "Alana",
+        "last": "Shuster"
+      },
+      "category": "Parent/Youth",
+      "phone": "3523022313",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "144",
+      "racer1": {
+        "first": "Cameron",
+        "last": "Simpson"
+      },
+      "racer2": {
+        "first": "Jackson",
+        "last": "Moberg"
+      },
+      "category": "Youth",
+      "phone": "3523615503",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "145",
+      "racer1": {
+        "first": "Rama Van",
+        "last": "Shuster"
+      },
+      "racer2": {
+        "first": "Jerry",
+        "last": "Richards"
+      },
+      "category": "Youth",
+      "phone": "3523022313",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "146",
+      "racer1": {
+        "first": "Amelia",
+        "last": "Shuster"
+      },
+      "racer2": {
+        "first": "Brook",
+        "last": "Hill"
+      },
+      "category": "Youth",
+      "phone": "(352) 302-2313",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "147",
+      "racer1": {
+        "first": "John",
+        "last": "Edward"
+      },
+      "racer2": null,
+      "category": "One-man Canoe",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "148",
+      "racer1": {
+        "first": "Leonardo",
+        "last": "Lunardi"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "9419287313",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "149",
+      "racer1": {
+        "first": "York",
+        "last": "Dodd"
+      },
+      "racer2": {
+        "first": "Evan",
+        "last": "Brady"
+      },
+      "category": "Recreation",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "150",
+      "racer1": {
+        "first": "Katherine",
+        "last": "Stadler"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "151",
+      "racer1": {
+        "first": "Mary",
+        "last": "Hartley"
+      },
+      "racer2": {
+        "first": "Pat",
+        "last": "Hartley"
+      },
+      "category": "Mixed",
+      "phone": "3522158172",
+      "checkedIn": true,
+      "paidStatus": "Awaiting Payment"
+    },
+    {
+      "boatNumber": "152",
+      "racer1": {
+        "first": "Elizabeth",
+        "last": "Uliano"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "3526147620",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "153",
+      "racer1": {
+        "first": "John",
+        "last": "Johnson"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "3528713395",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "154",
+      "racer1": {
+        "first": "Douglas",
+        "last": "Self"
+      },
+      "racer2": null,
+      "category": "One-man Canoe",
+      "phone": "3528713395",
+      "checkedIn": false,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "155",
+      "racer1": {
+        "first": "Lance",
+        "last": "Larsson"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "8636571091",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "156",
+      "racer1": {
+        "first": "Charles",
+        "last": "Cooper"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "8632575475",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "157",
+      "racer1": {
+        "first": "Jennifer",
+        "last": "Bray"
+      },
+      "racer2": {
+        "first": "Ethan",
+        "last": "Bray"
+      },
+      "category": "Mixed",
+      "phone": "3525381628",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "158",
+      "racer1": {
+        "first": "Darren",
+        "last": "Weems"
+      },
+      "racer2": {
+        "first": "Kace",
+        "last": "Weems"
+      },
+      "category": "Parent/Youth",
+      "phone": "3525774248",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "159",
+      "racer1": {
+        "first": "Natalee",
+        "last": "Owens"
+      },
+      "racer2": {
+        "first": "Aubry",
+        "last": "Murphy"
+      },
+      "category": "Youth",
+      "phone": "3522227130",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "160",
+      "racer1": {
+        "first": "Rylan",
+        "last": "Daniels"
+      },
+      "racer2": {
+        "first": "Kevin",
+        "last": "Jerrels"
+      },
+      "category": "Youth",
+      "phone": "3522218866",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "161",
+      "racer1": {
+        "first": "Rachel",
+        "last": "Musgrave"
+      },
+      "racer2": {
+        "first": "Katie",
+        "last": "Quincy"
+      },
+      "category": "Women's",
+      "phone": "3525357066",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "162",
+      "racer1": {
+        "first": "Jonathan",
+        "last": "Coker"
+      },
+      "racer2": {
+        "first": "Landon",
+        "last": "Gazaway"
+      },
+      "category": "Parent/Youth",
+      "phone": "3529496728",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "163",
+      "racer1": {
+        "first": "Joshua",
+        "last": "Musgrave"
+      },
+      "racer2": {
+        "first": "Cooper",
+        "last": "Wetheerington"
+      },
+      "category": "Parent/Youth",
+      "phone": "6824127455",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "164",
+      "racer1": {
+        "first": "Sylar",
+        "last": "Handy"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3528101011",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "165",
+      "racer1": {
+        "first": "Russell",
+        "last": "Feldman"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3525033226",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "166",
+      "racer1": {
+        "first": "Victor",
+        "last": "V. Frankavilla"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "8139437112",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "167",
+      "racer1": {
+        "first": "Kaden",
+        "last": "Lanier"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3526818052",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "168",
+      "racer1": {
+        "first": "Jolan",
+        "last": "Dotty"
+      },
+      "racer2": {
+        "first": "Hunter",
+        "last": "Boyd"
+      },
+      "category": "Recreation",
+      "phone": "3526476162",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "169",
+      "racer1": {
+        "first": "Bolden",
+        "last": "Richardson"
+      },
+      "racer2": {
+        "first": "Elise",
+        "last": "Leturno"
+      },
+      "category": "Mixed",
+      "phone": "3524459486",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "170",
+      "racer1": {
+        "first": "Christina",
+        "last": "Norman"
+      },
+      "racer2": null,
+      "category": "Paddle Board",
+      "phone": "3523227810",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "171",
+      "racer1": {
+        "first": "Shari",
+        "last": "S. Frankavilla"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "9413067425",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "172",
+      "racer1": {
+        "first": "Edwards",
+        "last": "E. Frankavilla"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "9415397196",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "173",
+      "racer1": {
+        "first": "Michael",
+        "last": "Keown"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "8632583504",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "174",
+      "racer1": {
+        "first": "Andrew",
+        "last": "Vinson"
+      },
+      "racer2": {
+        "first": "Dustin",
+        "last": "Vinson"
+      },
+      "category": "Parent/Youth",
+      "phone": "8507285081",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "175",
+      "racer1": {
+        "first": "Lexi",
+        "last": "Sharp"
+      },
+      "racer2": {
+        "first": "Emmy",
+        "last": "Everidge"
+      },
+      "category": "Women's",
+      "phone": "3522831359",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "176",
+      "racer1": {
+        "first": "Matthew",
+        "last": "Harvey"
+      },
+      "racer2": {
+        "first": "Tyler",
+        "last": "Jopek"
+      },
+      "category": "Recreation",
+      "phone": "3526168037",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "177",
+      "racer1": {
+        "first": "Hailey",
+        "last": "Miller"
+      },
+      "racer2": {
+        "first": "Cassidy",
+        "last": "Pinner"
+      },
+      "category": "Women's",
+      "phone": "3529421250",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "178",
+      "racer1": {
+        "first": "Lane",
+        "last": "McLeod"
+      },
+      "racer2": {
+        "first": "Lawton",
+        "last": "Southerd"
+      },
+      "category": "Youth",
+      "phone": "3523181573",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "179",
+      "racer1": {
+        "first": "Jennifer",
+        "last": "Ponder"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "8504281764",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "180",
+      "racer1": {
+        "first": "James",
+        "last": "Langley"
+      },
+      "racer2": {
+        "first": "Francis",
+        "last": "Langley"
+      },
+      "category": "Experienced",
+      "phone": "3526658343",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "181",
+      "racer1": {
+        "first": "York",
+        "last": "Dodd"
+      },
+      "racer2": {
+        "first": "Evan",
+        "last": "Brady"
+      },
+      "category": "Recreation",
+      "phone": "3525307890",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "182",
+      "racer1": {
+        "first": "Matthew",
+        "last": "Harner"
+      },
+      "racer2": {
+        "first": "Mason",
+        "last": "Taylor"
+      },
+      "category": "Recreation",
+      "phone": "7272123358",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "183",
+      "racer1": {
+        "first": "Maria",
+        "last": "Stevens"
+      },
+      "racer2": null,
+      "category": "Senior Kayak",
+      "phone": "6154034532",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "184",
+      "racer1": {
+        "first": "Thomas",
+        "last": "Ellis"
+      },
+      "racer2": null,
+      "category": "Men's Kayak",
+      "phone": "3528403137",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "185",
+      "racer1": {
+        "first": "David",
+        "last": "Michael"
+      },
+      "racer2": {
+        "first": "Susan",
+        "last": "Parmelee"
+      },
+      "category": "Mixed",
+      "phone": "8083758275",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "186",
+      "racer1": {
+        "first": "Mel",
+        "last": "Moller"
+      },
+      "racer2": {
+        "first": "Joey",
+        "last": "Dyson"
+      },
+      "category": "Mixed",
+      "phone": "7862776326",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "187",
+      "racer1": {
+        "first": "Diana",
+        "last": "Alava"
+      },
+      "racer2": {
+        "first": "Dylon",
+        "last": "Blalock"
+      },
+      "category": "Mixed",
+      "phone": "5612849396",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "188",
+      "racer1": {
+        "first": "Dana",
+        "last": "Allen"
+      },
+      "racer2": {
+        "first": "Brenna",
+        "last": "Holder"
+      },
+      "category": "Youth",
+      "phone": "7725289885",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "189",
+      "racer1": {
+        "first": "May",
+        "last": "Mansy"
+      },
+      "racer2": {
+        "first": "Noor",
+        "last": "Badreldin"
+      },
+      "category": "Parent/Youth",
+      "phone": "5177036145",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "190",
+      "racer1": {
+        "first": "Levi",
+        "last": "Smith"
+      },
+      "racer2": {
+        "first": "Roman",
+        "last": "Smith"
+      },
+      "category": "Parent/Youth",
+      "phone": "3525357449",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "191",
+      "racer1": {
+        "first": "Emmett",
+        "last": "Shultz"
+      },
+      "racer2": {
+        "first": "Eli",
+        "last": "Shultz"
+      },
+      "category": "Parent/Youth",
+      "phone": "3523615552",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "192",
+      "racer1": {
+        "first": "Angelica",
+        "last": "Haven"
+      },
+      "racer2": null,
+      "category": "Women's Kayak",
+      "phone": "7869252155",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "193",
+      "racer1": {
+        "first": "Chuck",
+        "last": "Harris"
+      },
+      "racer2": {
+        "first": "Jade",
+        "last": "Anderson"
+      },
+      "category": "Mixed",
+      "phone": "3524973738",
+      "checkedIn": true,
+      "paidStatus": ""
+    },
+    {
+      "boatNumber": "194",
+      "racer1": {
+        "first": "Doug",
+        "last": "Self"
+      },
+      "racer2": {
+        "first": "Tom",
+        "last": "Morris"
+      },
+      "category": "Senior",
+      "phone": "3525540018",
+      "checkedIn": true,
+      "paidStatus": ""
+    }
+  ]
+}

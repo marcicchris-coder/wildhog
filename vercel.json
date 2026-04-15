@@ -1,0 +1,41 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/scorecard",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public-scorecard",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public-scorecard.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/coordinator.html",
+      "destination": "/coordinator",
+      "permanent": true
+    },
+    {
+      "source": "/operator",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/operator.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
