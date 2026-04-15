@@ -5,3 +5,12 @@ out
 .env.local
 .vercel
 .DS_Store
+.codex
+README.md
+app.js
+operator.html
+public-scorecard.html
+styles.css
+server.js
+package-lock.json
+data/

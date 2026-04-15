@@ -4,25 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wild Hog Canoe Race Scorecard</title>
-  <link rel="stylesheet" href="scorecard.css?v=20260415-2" />
+  <link rel="stylesheet" href="scorecard.css?v=20260415-6" />
 </head>
 <body class="public-scorecard-page">
-  <header class="board-header public-scorecard-header">
-    <div>
-      <p class="eyebrow">Wild Hog Canoe Race</p>
-      <h1>Official Scorecard</h1>
-      <p class="subtitle">Live public standings from the shared race state.</p>
-    </div>
-    <div class="header-actions">
-      <button type="button" id="scorecard-refresh-button" class="header-button">Refresh</button>
-      <div id="scorecard-connection-pill" class="pill" data-status="loading">Connecting</div>
-      <div id="scorecard-updated-pill" class="pill pill-muted">Waiting for data</div>
+  <header class="public-hero">
+    <div class="public-hero-inner">
+      <div class="public-hero-copy">
+        <h1>Live Results</h1>
+        <p class="subtitle">Live race standings and category leaders</p>
+        <div class="hero-pills" aria-label="Race status">
+          <div id="scorecard-connection-pill" class="pill live-pill" data-status="loading">Checking feed</div>
+          <div id="scorecard-updated-pill" class="pill pill-muted">Waiting for data</div>
+        </div>
+      </div>
+      <div class="public-hero-brand">
+        <img src="assets/wildhog-logo.png" alt="Wild Hog Canoe Race logo" class="scorecard-brand-logo" />
+      </div>
     </div>
   </header>
 
   <main class="public-scorecard-shell">
-    <section class="summary-grid public-summary-grid">
-      <article class="summary-card">
+    <section class="public-summary" aria-label="Race summary">
+      <article class="summary-card summary-card-strong">
         <span class="summary-label">Teams</span>
         <strong id="scorecard-summary-total">0</strong>
       </article>
@@ -38,18 +41,61 @@
         <span class="summary-label">DNF</span>
         <strong id="scorecard-summary-dnf">0</strong>
       </article>
+      <article class="summary-card">
+        <span class="summary-label">Updated</span>
+        <strong id="scorecard-summary-updated">--</strong>
+      </article>
     </section>
 
-    <section class="card public-scorecard-card">
-      <div class="scorecard-toolbar">
-        <p id="public-score-summary">Loading scorecard...</p>
+    <section class="public-highlights" aria-labelledby="highlights-title">
+      <div class="section-heading">
+        <p class="section-kicker">Race Pulse</p>
+        <h2 id="highlights-title">Live Highlights</h2>
+        <p id="public-score-summary" class="section-note">Loading scorecard...</p>
       </div>
-      <div id="public-score-fit-frame" class="score-fit-frame public-score-fit-frame">
-        <div id="public-score-groups" class="score-groups"></div>
+
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <div class="highlight-card-header">
+            <div>
+              <p class="highlight-eyebrow">Fresh off the river</p>
+              <h3>Latest Finishers</h3>
+            </div>
+          </div>
+          <div id="public-latest-finishers" class="highlight-list" aria-live="polite"></div>
+        </article>
+
+        <article class="highlight-card">
+          <div class="highlight-card-header">
+            <div>
+              <p class="highlight-eyebrow">Fastest completed runs</p>
+              <h3>Top Overall Right Now</h3>
+            </div>
+          </div>
+          <div id="public-top-overall" class="highlight-list" aria-live="polite"></div>
+        </article>
       </div>
+    </section>
+
+    <section class="public-results" aria-labelledby="results-title">
+      <div class="section-heading section-heading-split">
+        <div>
+          <p class="section-kicker">Leaderboard</p>
+          <h2 id="results-title">Category Results</h2>
+          <p class="section-note">Browse every division or jump straight to the one you want.</p>
+        </div>
+        <form class="category-filter" aria-label="Category filter">
+          <label for="category-filter-select">Category</label>
+          <select id="category-filter-select">
+            <option value="all">All Categories</option>
+          </select>
+        </form>
+      </div>
+
+      <div id="public-category-groups" class="public-category-groups" aria-live="polite"></div>
     </section>
   </main>
 
-  <script type="module" src="js/public-scorecard.js?v=20260415-2"></script>
+  <script type="module" src="js/public-scorecard.js?v=20260415-6"></script>
 </body>
 </html>

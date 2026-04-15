@@ -3,97 +3,193 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wild Hog Coordinator Board</title>
-  <link rel="stylesheet" href="coordinator.css?v=20260409-1" />
+  <title>Wild Hog Race Control</title>
+  <link rel="stylesheet" href="coordinator.css?v=20260415-2" />
 </head>
 <body>
   <header class="board-header">
-    <div>
-      <p class="eyebrow">Wild Hog Canoe Race</p>
-      <h1>Coordinator Board</h1>
-      <p class="subtitle">Read-only roster, launch, and finish tracking for race staff.</p>
-    </div>
-    <div class="header-actions">
-      <button type="button" id="refresh-button" class="header-button">Refresh</button>
-      <div id="connection-pill" class="pill" data-status="loading">Connecting</div>
-      <div id="updated-pill" class="pill pill-muted">Waiting for data</div>
+    <div class="board-header-inner">
+      <div class="board-brand">
+        <img src="assets/wildhog-logo.png" alt="Wild Hog Canoe Race logo" class="board-brand-logo" />
+      </div>
+      <div class="board-copy">
+        <p class="eyebrow">Wild Hog Canoe Race</p>
+        <h1>Race Control</h1>
+        <p class="subtitle">Dashboard for race progress, standings, and awards.</p>
+      </div>
+      <div class="header-actions">
+        <button type="button" id="refresh-button" class="header-button">Refresh</button>
+        <div id="connection-pill" class="pill" data-status="loading">Connecting</div>
+        <div id="updated-pill" class="pill pill-muted">Waiting for data</div>
+      </div>
     </div>
   </header>
 
   <main class="board-shell">
-    <section class="summary-grid" id="summary-grid">
-      <article class="summary-card">
-        <span class="summary-label">Teams</span>
-        <strong id="summary-total">0</strong>
-      </article>
-      <article class="summary-card">
-        <span class="summary-label">Checked In</span>
-        <strong id="summary-checked-in">0</strong>
-      </article>
-      <article class="summary-card">
-        <span class="summary-label">Racing</span>
-        <strong id="summary-racing">0</strong>
-      </article>
-      <article class="summary-card">
-        <span class="summary-label">Finished</span>
-        <strong id="summary-finished">0</strong>
-      </article>
+    <nav class="view-tabs" aria-label="Race Control views">
+      <button type="button" class="view-tab is-active" data-view="overview">Overview</button>
+      <button type="button" class="view-tab" data-view="awards">Awards</button>
+      <button type="button" class="view-tab" data-view="roster">Roster</button>
+    </nav>
+
+    <section class="view-panel is-active" id="overview-view" data-view-panel="overview">
+      <section class="summary-grid" id="summary-grid">
+        <article class="summary-card">
+          <span class="summary-label">Teams</span>
+          <strong id="summary-total">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">Checked In</span>
+          <strong id="summary-checked-in">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">Racing</span>
+          <strong id="summary-racing">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">Finished</span>
+          <strong id="summary-finished">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">DNF</span>
+          <strong id="summary-dnf">0</strong>
+        </article>
+        <article class="summary-card summary-card-attention">
+          <span class="summary-label">Penalties</span>
+          <strong id="summary-attention">0</strong>
+        </article>
+      </section>
+
+      <section class="overview-grid">
+        <article class="board-card">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Live Operations</p>
+              <h2>Still Racing</h2>
+            </div>
+            <p id="still-racing-summary" class="panel-summary">0 boats on course</p>
+          </div>
+          <div id="still-racing-list" class="panel-list"></div>
+        </article>
+
+        <article class="board-card">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Live Operations</p>
+              <h2>Latest Finishers</h2>
+            </div>
+            <p id="latest-finishers-summary" class="panel-summary">Waiting for finishers</p>
+          </div>
+          <div id="latest-finishers-list" class="panel-list"></div>
+        </article>
+
+        <article class="board-card">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Penalties</p>
+              <h2>Penalties</h2>
+            </div>
+            <p id="attention-summary" class="panel-summary">No flagged teams</p>
+          </div>
+          <div id="attention-list" class="panel-list"></div>
+        </article>
+
+        <article class="board-card">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">At A Glance</p>
+              <h2>Category Progress</h2>
+            </div>
+            <p id="category-progress-summary" class="panel-summary">Progress across all categories</p>
+          </div>
+          <div id="category-progress-list" class="category-progress-grid"></div>
+        </article>
+      </section>
     </section>
 
-    <section class="toolbar">
-      <label class="toolbar-field toolbar-search">
-        <span>Search</span>
-        <input id="search-input" type="search" placeholder="Boat, racer, or category" autocomplete="off" />
-      </label>
+    <section class="view-panel" id="awards-view" data-view-panel="awards" hidden>
+      <section class="board-card awards-board awards-board-overall">
+        <div class="panel-header">
+          <div>
+            <p class="panel-kicker">Awards</p>
+            <h2>Overall Winners</h2>
+          </div>
+          <p id="awards-summary" class="panel-summary">Awards populate from current standings.</p>
+        </div>
+        <div id="awards-overall" class="awards-grid"></div>
+      </section>
 
-      <label class="toolbar-field">
-        <span>Status</span>
-        <select id="status-filter">
-          <option value="all">All statuses</option>
-          <option value="registered">Registered</option>
-          <option value="ready">Ready</option>
-          <option value="racing">Racing</option>
-          <option value="finished">Finished</option>
-          <option value="dnf">DNF</option>
-        </select>
-      </label>
-
-      <label class="toolbar-field">
-        <span>Category</span>
-        <select id="category-filter">
-          <option value="all">All categories</option>
-        </select>
-      </label>
+      <section class="board-card awards-board">
+        <div class="panel-header">
+          <div>
+            <p class="panel-kicker">Awards</p>
+            <h2>Category Winners</h2>
+          </div>
+          <p class="panel-summary">Recreation shows places 1 through 5. All other categories show places 1 through 3.</p>
+        </div>
+        <div id="awards-categories" class="awards-category-grid"></div>
+      </section>
     </section>
 
-    <section class="board-card">
-      <div class="table-header">
-        <h2>Race Roster</h2>
-        <p id="table-summary">0 teams shown</p>
-      </div>
-      <div class="table-wrap">
-        <table class="board-table">
-          <thead>
-            <tr>
-              <th>Boat</th>
-              <th>Racers</th>
-              <th>Category</th>
-              <th>Status</th>
-              <th>Start</th>
-              <th>Finish</th>
-              <th>Penalty</th>
-            </tr>
-          </thead>
-          <tbody id="board-table-body">
-            <tr>
-              <td colspan="7" class="empty-cell">Loading coordinator data...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section class="view-panel" id="roster-view" data-view-panel="roster" hidden>
+      <section class="toolbar">
+        <label class="toolbar-field toolbar-search">
+          <span>Search</span>
+          <input id="search-input" type="search" placeholder="Boat, racer, or category" autocomplete="off" />
+        </label>
+
+        <label class="toolbar-field">
+          <span>Status</span>
+          <select id="status-filter">
+            <option value="all">All statuses</option>
+            <option value="registered">Registered</option>
+            <option value="ready">Ready</option>
+            <option value="racing">Racing</option>
+            <option value="finished">Finished</option>
+            <option value="dnf">DNF</option>
+          </select>
+        </label>
+
+        <label class="toolbar-field">
+          <span>Category</span>
+          <select id="category-filter">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="board-card">
+        <div class="table-header">
+          <div>
+            <p class="panel-kicker">Lookup</p>
+            <h2>Roster</h2>
+          </div>
+          <p id="table-summary">0 teams shown</p>
+        </div>
+        <div class="table-wrap">
+          <table class="board-table">
+            <thead>
+              <tr>
+                <th>Boat</th>
+                <th>Racers</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Start</th>
+                <th>Finish</th>
+                <th>Penalty</th>
+              </tr>
+            </thead>
+            <tbody id="board-table-body">
+              <tr>
+                <td colspan="7" class="empty-cell">Loading Race Control data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </section>
   </main>
 
-  <script type="module" src="coordinator.js?v=20260415-1"></script>
+  <script type="module" src="coordinator.js?v=20260415-2"></script>
 </body>
 </html>
