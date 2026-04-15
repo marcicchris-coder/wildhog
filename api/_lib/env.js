@@ -39,15 +39,26 @@ export function loadLocalEnvFile() {
   }
 }
 
+function normalizeEnvValue(value) {
+  const normalized = String(value).trim();
+  if (
+    (normalized.startsWith("\"") && normalized.endsWith("\""))
+    || (normalized.startsWith("'") && normalized.endsWith("'"))
+  ) {
+    return normalized.slice(1, -1);
+  }
+  return normalized;
+}
+
 export function readEnv(name, fallback = "") {
   loadLocalEnvFile();
   const value = process.env[name];
-  if (value != null && value !== "") return String(value);
+  if (value != null && value !== "") return normalizeEnvValue(value);
 
   const aliases = ENV_ALIASES.get(name) || [];
   for (const alias of aliases) {
     const aliasedValue = process.env[alias];
-    if (aliasedValue != null && aliasedValue !== "") return String(aliasedValue);
+    if (aliasedValue != null && aliasedValue !== "") return normalizeEnvValue(aliasedValue);
   }
   return fallback;
 }
