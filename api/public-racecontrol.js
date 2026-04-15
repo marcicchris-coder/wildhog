@@ -1,5 +1,5 @@
 import {
-  buildPublicCoordinatorState,
+  buildPublicRaceControlState,
 } from "./_lib/state-shape.js";
 import {
   getLatestStateSnapshotMetadata,
@@ -28,7 +28,7 @@ export default async function handler(request, response) {
     response.setHeader("Content-Type", "application/json; charset=utf-8");
     response.setHeader("X-Race-State-Snapshot", current.snapshotId);
     response.status(200).json({
-      state: buildPublicCoordinatorState(current.state),
+      state: buildPublicRaceControlState(current.state),
       snapshotId: current.snapshotId,
     });
   } catch (error) {
@@ -36,7 +36,7 @@ export default async function handler(request, response) {
     const unavailable = message.includes("Supabase state backend is not configured.");
     response.setHeader("Cache-Control", "no-store");
     response.status(unavailable ? 503 : 500).json({
-      error: unavailable ? "public_coordinator_unavailable" : "public_coordinator_error",
+      error: unavailable ? "public_racecontrol_unavailable" : "public_racecontrol_error",
       message,
     });
   }

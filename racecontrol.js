@@ -13,7 +13,7 @@ import {
 } from "./js/shared/race-view.js";
 import { fetchSnapshot } from "./js/shared/public-fetch.js";
 
-const API_PATH = "/api/public-coordinator";
+const API_PATH = "/api/public-racecontrol";
 const POLL_MS = 15000;
 const HIGHLIGHT_LIMIT = 5;
 const OVERALL_AWARDS_LIMIT = 3;

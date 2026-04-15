@@ -112,7 +112,7 @@ export function buildPublicScorecardState(input) {
   };
 }
 
-export function buildPublicCoordinatorState(input) {
+export function buildPublicRaceControlState(input) {
   const source = normalizePersistedState(input);
   return {
     schemaVersion: source.schemaVersion,

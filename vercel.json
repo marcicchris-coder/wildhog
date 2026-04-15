@@ -23,8 +23,8 @@
       "permanent": true
     },
     {
-      "source": "/coordinator.html",
-      "destination": "/coordinator",
+      "source": "/racecontrol.html",
+      "destination": "/racecontrol",
       "permanent": true
     },
     {
