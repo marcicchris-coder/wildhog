@@ -28,6 +28,16 @@
       "permanent": true
     },
     {
+      "source": "/coordinator",
+      "destination": "/racecontrol",
+      "permanent": true
+    },
+    {
+      "source": "/coordinator.html",
+      "destination": "/racecontrol",
+      "permanent": true
+    },
+    {
       "source": "/operator",
       "destination": "/",
       "permanent": true
