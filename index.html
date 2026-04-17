@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wild Hog Canoe Race Scorecard</title>
-  <link rel="stylesheet" href="scorecard.css?v=20260415-7" />
+  <link rel="stylesheet" href="scorecard.css?v=20260417-1" />
 </head>
 <body class="public-scorecard-page">
   <header class="public-hero">
@@ -79,12 +79,24 @@
           <h2 id="results-title">Category Results</h2>
           <p class="section-note">Browse every division or jump straight to the one you want.</p>
         </div>
-        <form class="category-filter" aria-label="Category filter">
-          <label for="category-filter-select">Category</label>
-          <select id="category-filter-select">
-            <option value="all">All Categories</option>
-          </select>
-        </form>
+        <div class="results-controls" aria-label="Results filters">
+          <form class="scorecard-search" role="search" aria-label="Search results">
+            <label for="scorecard-search-input">Search</label>
+            <input
+              id="scorecard-search-input"
+              type="search"
+              inputmode="search"
+              autocomplete="off"
+              placeholder="Boat number or racer name"
+            />
+          </form>
+          <form class="category-filter" aria-label="Category filter">
+            <label for="category-filter-select">Category</label>
+            <select id="category-filter-select">
+              <option value="all">All Categories</option>
+            </select>
+          </form>
+        </div>
       </div>
 
       <div id="public-category-groups" class="public-category-groups" aria-live="polite"></div>
@@ -95,6 +107,6 @@
     <p>Powered by MoveClearly.com</p>
   </footer>
 
-  <script type="module" src="js/public-scorecard.js?v=20260415-7"></script>
+  <script type="module" src="js/public-scorecard.js?v=20260417-1"></script>
 </body>
 </html>

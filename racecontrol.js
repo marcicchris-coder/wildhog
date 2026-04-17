@@ -1,14 +1,17 @@
 import {
   buildScoreRows,
+  displayCategoryName,
   displayRosterName,
   displayTeamName,
   formatClock,
   formatDuration,
   formatPenaltyMinutes,
+  isRecreationCategory,
   normalizeBoat,
   normalizeCategoryName,
   orderedCategories,
   statusLabel,
+  teamRacerNames,
   teamStatus,
 } from "./js/shared/race-view.js";
 import { fetchSnapshot } from "./js/shared/public-fetch.js";
@@ -16,7 +19,9 @@ import { fetchSnapshot } from "./js/shared/public-fetch.js";
 const API_PATH = "/api/public-racecontrol";
 const POLL_MS = 15000;
 const HIGHLIGHT_LIMIT = 5;
+const STILL_RACING_COLLAPSED_LIMIT = 5;
 const OVERALL_AWARDS_LIMIT = 3;
+const SEARCH_INPUT_DEBOUNCE_MS = 120;
 
 const state = {
   payload: null,
@@ -26,6 +31,7 @@ const state = {
   searchQuery: "",
   refreshInFlight: false,
   activeView: "overview",
+  stillRacingExpanded: false,
 };
 
 function escapeHtml(value) {
@@ -37,14 +43,30 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function debounce(callback, waitMs) {
+  let timerId = null;
+  return (...args) => {
+    if (timerId) window.clearTimeout(timerId);
+    timerId = window.setTimeout(() => {
+      timerId = null;
+      callback(...args);
+    }, waitMs);
+  };
+}
+
 function normalizedCategory(team) {
   return normalizeCategoryName(team?.category || "Uncategorized");
+}
+
+function visibleCategory(team) {
+  return displayCategoryName(normalizedCategory(team));
 }
 
 function teamSearchText(team) {
   return [
     team.boatNumber,
     team.category,
+    displayCategoryName(team.category || "Uncategorized"),
     displayRosterName(team),
     statusLabel(teamStatus(team)),
   ].join(" ").toLowerCase();
@@ -86,12 +108,21 @@ function setUpdatedAt(value) {
 function renderSummary(teams) {
   const counts = {
     total: teams.length,
-    checkedIn: teams.filter((team) => team.checkedIn).length,
-    racing: teams.filter((team) => teamStatus(team) === "racing").length,
-    finished: teams.filter((team) => teamStatus(team) === "finished").length,
-    dnf: teams.filter((team) => teamStatus(team) === "dnf").length,
-    attention: teams.filter(teamNeedsAttention).length,
+    checkedIn: 0,
+    racing: 0,
+    finished: 0,
+    dnf: 0,
+    attention: 0,
   };
+
+  teams.forEach((team) => {
+    if (team.checkedIn) counts.checkedIn += 1;
+    const status = teamStatus(team);
+    if (status === "racing") counts.racing += 1;
+    else if (status === "finished") counts.finished += 1;
+    else if (status === "dnf") counts.dnf += 1;
+    if (teamNeedsAttention(team)) counts.attention += 1;
+  });
 
   document.querySelector("#summary-total").textContent = String(counts.total);
   document.querySelector("#summary-checked-in").textContent = String(counts.checkedIn);
@@ -109,7 +140,9 @@ function renderCategoryOptions(teams) {
 
   select.innerHTML = [
     '<option value="all">All categories</option>',
-    ...categories.map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`),
+    ...categories.map((category) => `
+      <option value="${escapeHtml(category)}">${escapeHtml(displayCategoryName(category))}</option>
+    `),
   ].join("");
   select.value = categories.includes(state.categoryFilter) ? state.categoryFilter : "all";
 }
@@ -121,7 +154,8 @@ function renderEmptyState(message) {
 function renderStillRacing(teams) {
   const container = document.querySelector("#still-racing-list");
   const summary = document.querySelector("#still-racing-summary");
-  if (!container || !summary) return;
+  const toggle = document.querySelector("#still-racing-toggle");
+  if (!container || !summary || !toggle) return;
 
   const rows = teams
     .filter((team) => teamStatus(team) === "racing")
@@ -129,12 +163,25 @@ function renderStillRacing(teams) {
 
   summary.textContent = `${rows.length} boat${rows.length === 1 ? "" : "s"} on course`;
 
+  const canToggle = rows.length > STILL_RACING_COLLAPSED_LIMIT;
+  const visibleRows = state.stillRacingExpanded || !canToggle
+    ? rows
+    : rows.slice(0, STILL_RACING_COLLAPSED_LIMIT);
+
+  toggle.hidden = !canToggle;
+  toggle.setAttribute("aria-expanded", String(state.stillRacingExpanded && canToggle));
+  toggle.textContent = state.stillRacingExpanded
+    ? "Show fewer boats"
+    : `Show all ${rows.length} boats`;
+
   if (!rows.length) {
+    toggle.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
     container.innerHTML = renderEmptyState("No boats are currently racing.");
     return;
   }
 
-  container.innerHTML = rows.map((team) => `
+  container.innerHTML = visibleRows.map((team) => `
     <article class="dashboard-row">
       <span class="boat-pill">Boat ${escapeHtml(team.boatNumber || "-")}</span>
       <div class="dashboard-row-main">
@@ -142,7 +189,7 @@ function renderStillRacing(teams) {
           <span>${escapeHtml(displayTeamName(team))}</span>
           <span class="status-pill" data-status="racing">Racing</span>
         </p>
-        <p class="dashboard-row-meta">${escapeHtml(normalizedCategory(team))}</p>
+        <p class="dashboard-row-meta">${escapeHtml(visibleCategory(team))}</p>
       </div>
       <div class="dashboard-row-side">
         <strong>${escapeHtml(formatClock(team.startTime))}</strong>
@@ -177,7 +224,7 @@ function renderLatestFinishers(teams) {
           <span>${escapeHtml(displayTeamName(team))}</span>
           <span class="status-pill" data-status="finished">Finished</span>
         </p>
-        <p class="dashboard-row-meta">${escapeHtml(normalizedCategory(team))}</p>
+        <p class="dashboard-row-meta">${escapeHtml(visibleCategory(team))}</p>
       </div>
       <div class="dashboard-row-side">
         <strong>${escapeHtml(formatClock(team.finishTime))}</strong>
@@ -213,7 +260,7 @@ function renderAttention(teams) {
             <span>${escapeHtml(displayTeamName(team))}</span>
             <span class="status-pill" data-status="${escapeHtml(status)}">${escapeHtml(statusLabel(status))}</span>
           </p>
-          <p class="dashboard-row-meta">${escapeHtml(normalizedCategory(team))}</p>
+          <p class="dashboard-row-meta">${escapeHtml(visibleCategory(team))}</p>
         </div>
         <div class="dashboard-row-side">
           <strong class="attention-badge">${escapeHtml(attentionReason(team))}</strong>
@@ -251,7 +298,7 @@ function renderCategoryProgress(teams, source) {
 
     return `
       <article class="progress-card">
-        <h3>${escapeHtml(category)}</h3>
+        <h3>${escapeHtml(displayCategoryName(category))}</h3>
         <p class="progress-meta">${totals.total} total teams</p>
         <div class="progress-counts">
           <span class="count-chip">${totals.racing} racing</span>
@@ -270,6 +317,19 @@ function placeBadgeClass(place) {
   if (place === 4) return "place-4";
   if (place === 5) return "place-5";
   return "place-default";
+}
+
+function renderAwardNameBlock(team) {
+  const names = teamRacerNames(team);
+  if (!names.length) {
+    return '<h3 class="award-row-names"><span class="award-name-line">No racers listed</span></h3>';
+  }
+
+  return `
+    <h3 class="award-row-names">
+      ${names.map((name) => `<span class="award-name-line">${escapeHtml(name)}</span>`).join("")}
+    </h3>
+  `;
 }
 
 function renderAwards(teams, source) {
@@ -294,8 +354,8 @@ function renderAwards(teams, source) {
         <article class="award-row">
           <span class="place-badge ${placeBadgeClass(row.overall)}">${row.overall}</span>
           <div class="award-row-main">
-            <h3>${escapeHtml(displayTeamName(row.team))}</h3>
-            <p class="award-row-meta">Boat ${escapeHtml(row.team.boatNumber || "-")} · ${escapeHtml(normalizedCategory(row.team))}</p>
+            ${renderAwardNameBlock(row.team)}
+            <p class="award-row-meta">Boat ${escapeHtml(row.team.boatNumber || "-")} · ${escapeHtml(visibleCategory(row.team))}</p>
           </div>
           <div class="award-row-side">
             <strong>${escapeHtml(formatDuration(row.elapsedSeconds))}</strong>
@@ -307,7 +367,7 @@ function renderAwards(teams, source) {
 
   const categoryCards = categories.map((category) => {
     const categoryKey = normalizeCategoryName(category).toLowerCase();
-    const isRecreation = categoryKey.includes("recreation");
+    const isRecreation = isRecreationCategory(category);
     const limit = isRecreation ? 5 : 3;
     const winners = rows
       .filter((row) => normalizeCategoryName(row.team.category || "Uncategorized").toLowerCase() === categoryKey)
@@ -315,7 +375,7 @@ function renderAwards(teams, source) {
 
     return `
       <article class="progress-card">
-        <h3>${escapeHtml(category)}</h3>
+        <h3>${escapeHtml(displayCategoryName(category))}</h3>
         <p class="progress-meta">${isRecreation ? "Places 1 through 5" : "Places 1 through 3"}</p>
         <div class="panel-list">
           ${winners.length
@@ -323,12 +383,12 @@ function renderAwards(teams, source) {
                 <article class="award-row">
                   <span class="place-badge ${placeBadgeClass(row.categoryPlace)}">${row.categoryPlace}</span>
                   <div class="award-row-main">
-                    <h3>${escapeHtml(displayTeamName(row.team))}</h3>
+                    ${renderAwardNameBlock(row.team)}
                     <p class="award-row-meta">Boat ${escapeHtml(row.team.boatNumber || "-")}</p>
                   </div>
                   <div class="award-row-side">
                     <strong>${escapeHtml(formatDuration(row.elapsedSeconds))}</strong>
-                    <span class="muted">${escapeHtml(normalizedCategory(row.team))}</span>
+                    <span class="muted">${escapeHtml(visibleCategory(row.team))}</span>
                   </div>
                 </article>
               `).join("")
@@ -372,7 +432,7 @@ function renderTable(teams) {
             <span class="racer-line">${escapeHtml(displayRosterName(team))}</span>
           </div>
         </td>
-        <td>${escapeHtml(team.category || "Uncategorized")}</td>
+        <td>${escapeHtml(displayCategoryName(team.category || "Uncategorized"))}</td>
         <td><span class="status-pill" data-status="${escapeHtml(status)}">${escapeHtml(statusLabel(status))}</span></td>
         <td>${escapeHtml(formatClock(team.startTime))}</td>
         <td>${escapeHtml(formatClock(team.finishTime))}</td>
@@ -444,10 +504,15 @@ document.querySelectorAll(".view-tab").forEach((button) => {
   });
 });
 
-document.querySelector("#search-input")?.addEventListener("input", (event) => {
+document.querySelector("#still-racing-toggle")?.addEventListener("click", () => {
+  state.stillRacingExpanded = !state.stillRacingExpanded;
+  renderStillRacing(state.payload?.state?.teams || []);
+});
+
+document.querySelector("#search-input")?.addEventListener("input", debounce((event) => {
   state.searchQuery = event.currentTarget.value;
   renderTable(state.payload?.state?.teams || []);
-});
+}, SEARCH_INPUT_DEBOUNCE_MS));
 
 document.querySelector("#status-filter")?.addEventListener("change", (event) => {
   state.statusFilter = event.currentTarget.value;
@@ -460,6 +525,7 @@ document.querySelector("#category-filter")?.addEventListener("change", (event) =
 });
 
 window.setInterval(() => {
+  if (document.hidden) return;
   void refreshData();
 }, POLL_MS);
 

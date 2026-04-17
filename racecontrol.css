@@ -281,6 +281,12 @@ select {
   margin-bottom: 0.85rem;
 }
 
+.panel-header-side {
+  display: grid;
+  justify-items: end;
+  gap: 0.45rem;
+}
+
 .panel-header h2,
 .table-header h2 {
   font-size: 1.28rem;
@@ -291,6 +297,33 @@ select {
 .table-header p {
   margin: 0;
   font-weight: 700;
+}
+
+.panel-toggle {
+  border: 1px solid rgba(31, 107, 87, 0.22);
+  border-radius: 999px;
+  background: rgba(31, 107, 87, 0.08);
+  color: var(--accent-deep);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.45rem 0.78rem;
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.panel-toggle:hover {
+  background: rgba(31, 107, 87, 0.14);
+  border-color: rgba(31, 107, 87, 0.34);
+  transform: translateY(-1px);
+}
+
+.panel-toggle:active {
+  transform: translateY(0);
+}
+
+.panel-toggle:focus-visible {
+  outline: 3px solid rgba(31, 107, 87, 0.22);
+  outline-offset: 2px;
 }
 
 .panel-list,
@@ -469,6 +502,19 @@ select {
   min-height: calc(1.2em * 2);
 }
 
+.award-row-main .award-row-names {
+  display: grid;
+  gap: 0.18rem;
+  line-height: 1.2;
+  min-height: auto;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.award-name-line {
+  display: block;
+}
+
 .place-badge {
   min-width: 2.8rem;
   min-height: 2.8rem;
@@ -605,6 +651,14 @@ select {
   .summary-grid,
   .awards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .panel-header {
+    flex-direction: column;
+  }
+
+  .panel-header-side {
+    justify-items: start;
   }
 
   .dashboard-row,

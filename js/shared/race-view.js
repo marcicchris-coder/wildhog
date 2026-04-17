@@ -9,6 +9,38 @@ export function normalizeCategoryName(value) {
     .trim();
 }
 
+const CANOE_CATEGORY_KEYS = new Set([
+  "experienced",
+  "mixed",
+  "parent/youth",
+  "recreation",
+  "senior",
+  "womens",
+  "women's",
+  "youth",
+]);
+
+function canonicalCategoryKey(value) {
+  return normalizeCategoryName(value)
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .replace(/\s*\/\s*/g, "/")
+    .replace(/\s+/g, " ")
+    .replace(/\s+canoe$/, "")
+    .trim();
+}
+
+export function displayCategoryName(value) {
+  const normalized = normalizeCategoryName(value);
+  if (!normalized) return "";
+  if (!CANOE_CATEGORY_KEYS.has(canonicalCategoryKey(normalized))) return normalized;
+  return /\bcanoe\b/i.test(normalized) ? normalized : `${normalized} Canoe`;
+}
+
+export function isRecreationCategory(value) {
+  return canonicalCategoryKey(value) === "recreation";
+}
+
 export function formatClock(value) {
   if (!value) return "-";
   const parsed = new Date(value);
@@ -47,6 +79,10 @@ function fullName(racer) {
   return `${String(racer.first || "").trim()} ${String(racer.last || "").trim()}`.trim();
 }
 
+export function teamRacerNames(team) {
+  return [fullName(team?.racer1), fullName(team?.racer2)].filter(Boolean);
+}
+
 export function displayTeamName(team) {
   const sponsor = String(team?.sponsorName || "").trim();
   if (sponsor) return sponsor;
@@ -56,7 +92,7 @@ export function displayTeamName(team) {
 }
 
 export function displayRosterName(team) {
-  const racers = [fullName(team?.racer1), fullName(team?.racer2)].filter(Boolean);
+  const racers = teamRacerNames(team);
   return racers.join(" & ") || "No racers listed";
 }
 

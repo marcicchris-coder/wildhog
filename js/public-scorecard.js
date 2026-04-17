@@ -1,11 +1,13 @@
 import {
   buildScoreRows,
   computeElapsedSeconds,
+  displayCategoryName,
+  displayRosterName,
   displayTeamName,
   formatDuration,
+  isRecreationCategory,
   normalizeCategoryName,
   orderedCategories,
-  statusLabel,
   teamStatus,
 } from "./shared/race-view.js";
 import { fetchSnapshot } from "./shared/public-fetch.js";
@@ -13,12 +15,14 @@ import { fetchSnapshot } from "./shared/public-fetch.js";
 const API_PATH = "/api/public-scorecard";
 const POLL_MS = 15000;
 const HIGHLIGHT_LIMIT = 5;
+const SEARCH_INPUT_DEBOUNCE_MS = 120;
 
 const state = {
   payload: null,
   snapshotId: null,
   refreshInFlight: false,
   selectedCategory: "all",
+  searchQuery: "",
   compactHeader: false,
 };
 
@@ -33,8 +37,23 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function debounce(callback, waitMs) {
+  let timerId = null;
+  return (...args) => {
+    if (timerId) window.clearTimeout(timerId);
+    timerId = window.setTimeout(() => {
+      timerId = null;
+      callback(...args);
+    }, waitMs);
+  };
+}
+
 function normalizedCategory(team) {
   return normalizeCategoryName(team?.category || "Uncategorized");
+}
+
+function visibleCategory(team) {
+  return displayCategoryName(normalizedCategory(team));
 }
 
 function formatUpdatedStatus(value) {
@@ -73,9 +92,10 @@ function renderSummary(teams, updatedAt) {
 function buildCategoryGroups(teams, standings, categoryOrder) {
   const overallByTeam = new Map(standings.map((row) => [row.team.id, row.overall]));
   const placeByTeam = new Map(standings.map((row) => [row.team.id, row.categoryPlace]));
+  const statusPriority = { finished: 0, racing: 1, ready: 2, registered: 3, dnf: 4 };
 
   return categoryOrder.map((category) => {
-    const categoryTeams = teams
+    const entries = teams
       .filter((team) => normalizedCategory(team) === category)
       .sort((left, right) => {
         const leftOverall = overallByTeam.get(left.id);
@@ -85,7 +105,6 @@ function buildCategoryGroups(teams, standings, categoryOrder) {
         if (rightOverall) return 1;
         const leftStatus = teamStatus(left);
         const rightStatus = teamStatus(right);
-        const statusPriority = { finished: 0, racing: 1, ready: 2, registered: 3, dnf: 4 };
         const leftPriority = statusPriority[leftStatus] ?? 99;
         const rightPriority = statusPriority[rightStatus] ?? 99;
         if (leftPriority !== rightPriority) return leftPriority - rightPriority;
@@ -102,12 +121,49 @@ function buildCategoryGroups(teams, standings, categoryOrder) {
           place,
           status,
           label: displayTeamName(team),
-          time: finished ? formatDuration(computeElapsedSeconds(team)) : status === "dnf" ? "DNF" : statusLabel(status),
+          roster: displayRosterName(team),
+          boatNumber: String(team.boatNumber || "").trim(),
+          time: finished ? formatDuration(computeElapsedSeconds(team)) : null,
+          searchText: [
+            team.boatNumber,
+            displayTeamName(team),
+            displayRosterName(team),
+            team.sponsorName,
+            team.racer1?.first,
+            team.racer1?.last,
+            team.racer2?.first,
+            team.racer2?.last,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase(),
         };
       });
 
-    const sublabel = categoryTeams.some((entry) => entry.status === "finished") ? "Top finishers" : "Live standings";
-    return { category, sublabel, teams: categoryTeams };
+    const finishers = entries.filter((entry) => entry.status === "finished");
+    const active = entries.filter((entry) => entry.status === "racing");
+    const dnf = entries.filter((entry) => entry.status === "dnf");
+    const totalEntries = entries.length;
+    const finishedCount = finishers.length;
+    const activeCount = active.length;
+    const remainingCount = Math.max(totalEntries - finishedCount - dnf.length, 0);
+    const isFinal = totalEntries > 0 && remainingCount === 0;
+    const featuredFinishers = finishers.slice(0, 3);
+
+    return {
+      category,
+      entries,
+      finishers,
+      featuredFinishers,
+      totalEntries,
+      finishedCount,
+      activeCount,
+      remainingCount,
+      isFinal,
+      progressPercent: totalEntries ? Math.round((finishedCount / totalEntries) * 100) : 0,
+      eyebrow: isFinal ? "Final Results" : "Live Standings",
+      remainder: entries.filter((entry) => !featuredFinishers.some((finisher) => finisher.team.id === entry.team.id)),
+    };
   });
 }
 
@@ -119,7 +175,7 @@ function latestFinishers(teams) {
     .map((team) => ({
       boatNumber: team.boatNumber || "-",
       label: displayTeamName(team),
-      category: normalizedCategory(team),
+      category: visibleCategory(team),
       meta: formatDuration(computeElapsedSeconds(team)),
     }));
 }
@@ -128,7 +184,7 @@ function topOverall(standings) {
   return standings.slice(0, HIGHLIGHT_LIMIT).map((row) => ({
     boatNumber: row.team.boatNumber || "-",
     label: displayTeamName(row.team),
-    category: normalizedCategory(row.team),
+    category: visibleCategory(row.team),
     meta: formatDuration(row.elapsedSeconds),
     place: row.overall,
   }));
@@ -164,7 +220,9 @@ function renderCategoryFilter(categories) {
 
   const previous = state.selectedCategory;
   const options = ['<option value="all">All Categories</option>']
-    .concat(categories.map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`))
+    .concat(categories.map((category) => `
+      <option value="${escapeHtml(category)}">${escapeHtml(displayCategoryName(category))}</option>
+    `))
     .join("");
 
   select.innerHTML = options;
@@ -186,62 +244,181 @@ function podiumClass(place) {
   return "";
 }
 
+function extendedPlaceClass(category, place) {
+  if (!isRecreationCategory(category)) return "";
+  if (place === 4) return "is-fourth";
+  if (place === 5) return "is-fifth";
+  return "";
+}
+
+function statusMarker(entry) {
+  if (entry.status === "finished") {
+    return { label: String(entry.place || "F"), className: podiumClass(entry.place) || "is-finished" };
+  }
+  if (entry.status === "racing") return { label: "LIVE", className: "status-live" };
+  if (entry.status === "dnf") return { label: "OUT", className: "status-dnf" };
+  return { label: "NS", className: "status-not-started" };
+}
+
+function secondaryLine(entry) {
+  if (entry.status === "finished") return `Finished • ${entry.time || "-"}`;
+  if (entry.status === "racing") return "On river";
+  if (entry.status === "dnf") return "DNF";
+  return "Not started";
+}
+
+function sideValue(entry) {
+  if (entry.status === "finished" && Number.isFinite(entry.overall)) {
+    return { primary: `#${entry.overall}`, secondary: "overall" };
+  }
+  if (entry.status === "finished") return { primary: "FINAL", secondary: "complete" };
+  if (entry.status === "racing") return { primary: "RACE", secondary: "active" };
+  if (entry.status === "dnf") return { primary: "FINAL", secondary: "result" };
+  if (entry.status === "ready") return { primary: "READY", secondary: "staged" };
+  return { primary: "REG", secondary: "entry" };
+}
+
+function renderSummaryChips(group) {
+  const chips = [
+    { label: "Entries", value: group.totalEntries },
+    { label: "Finished", value: group.finishedCount },
+    group.isFinal
+      ? { label: "Complete", value: "100%" }
+      : {
+          label: group.activeCount > 0 ? "On river" : "Remaining",
+          value: group.activeCount > 0 ? group.activeCount : group.remainingCount,
+        },
+  ];
+
+  return chips.map((chip) => `
+    <span class="category-summary-chip">
+      <strong>${escapeHtml(chip.value)}</strong>
+      <span>${escapeHtml(chip.label)}</span>
+    </span>
+  `).join("");
+}
+
+function renderProgressBar(group) {
+  if (group.isFinal || group.totalEntries === 0) return "";
+  return `
+    <div class="category-progress" aria-label="${escapeHtml(`${group.finishedCount} of ${group.totalEntries} finished`)}">
+      <div class="category-progress-track">
+        <span class="category-progress-fill" style="width: ${group.progressPercent}%"></span>
+      </div>
+      <div class="category-progress-meta">
+        <span>${escapeHtml(`${group.finishedCount} of ${group.totalEntries} finished`)}</span>
+        <span>${escapeHtml(`${group.progressPercent}% complete`)}</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderResultRow(entry, options = {}) {
+  const marker = statusMarker(entry);
+  const side = sideValue(entry);
+  const compactClass = options.compact ? " is-compact" : "";
+  const extendedClass = extendedPlaceClass(options.category, entry.place);
+  const rowClasses = [marker.className, extendedClass, compactClass].filter(Boolean).join(" ");
+
+  return `
+    <article class="result-row ${rowClasses}">
+      <div class="result-marker ${[marker.className, extendedClass].filter(Boolean).join(" ")}">
+        <span>${escapeHtml(marker.label)}</span>
+      </div>
+      <div class="result-main">
+        <div class="result-title-row">
+          <span class="boat-chip boat-chip-strong">Boat ${escapeHtml(entry.team.boatNumber || "-")}</span>
+          <h4>${escapeHtml(entry.label)}</h4>
+        </div>
+        <p class="result-secondary">${escapeHtml(secondaryLine(entry))}</p>
+      </div>
+      <div class="result-side">
+        <strong>${escapeHtml(side.primary)}</strong>
+        <span>${escapeHtml(side.secondary)}</span>
+      </div>
+    </article>
+  `;
+}
+
+function renderCategoryCard(group) {
+  const categoryKey = group.category.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-");
+  return `
+    <article class="category-card" data-state="${group.isFinal ? "final" : "live"}" data-category-key="${escapeHtml(categoryKey)}" id="category-${escapeHtml(categoryKey)}">
+      <header class="category-card-header">
+        <div class="category-card-title">
+          <p class="category-kicker">${escapeHtml(group.eyebrow)}</p>
+          <h3>${escapeHtml(displayCategoryName(group.category))}</h3>
+        </div>
+        <div class="category-summary-chips">
+          ${renderSummaryChips(group)}
+        </div>
+        ${renderProgressBar(group)}
+      </header>
+      ${group.isFinal
+        ? `
+          <div class="category-card-body category-card-body-final">
+            <div class="leaderboard-list final-featured-list">
+              ${group.featuredFinishers.length
+                ? group.featuredFinishers.map((entry) => renderResultRow(entry, { category: group.category })).join("")
+                : '<div class="empty-state">No finishers have been recorded in this category.</div>'}
+            </div>
+            ${group.remainder.length
+              ? `
+                <div class="leaderboard-list leaderboard-list-tight">
+                  ${group.remainder.map((entry) => renderResultRow(entry, { compact: true, category: group.category })).join("")}
+                </div>
+              `
+              : ""}
+          </div>
+        `
+        : `
+          <div class="category-card-body">
+            <div class="leaderboard-list">
+              ${group.entries.length
+                ? group.entries.map((entry) => renderResultRow(entry, { category: group.category })).join("")
+                : '<div class="empty-state">No teams registered in this category yet.</div>'}
+            </div>
+          </div>
+        `}
+    </article>
+  `;
+}
+
 function renderCategoryGroups(groups) {
   const container = document.querySelector("#public-category-groups");
   if (!container) return;
 
+  const query = state.searchQuery.trim().toLowerCase();
   const visibleGroups = state.selectedCategory === "all"
     ? groups
     : groups.filter((group) => group.category === state.selectedCategory);
+  const matchedGroups = visibleGroups
+    .map((group) => {
+      if (!query) return group;
+      const matches = group.entries.filter((entry) => entry.searchText.includes(query));
+      const matchedIds = new Set(matches.map((entry) => entry.team.id));
+      const featuredFinishers = group.featuredFinishers.filter((entry) => matchedIds.has(entry.team.id));
+      const remainder = group.remainder.filter((entry) => matchedIds.has(entry.team.id));
+      return {
+        ...group,
+        entries: matches,
+        finishers: group.finishers.filter((entry) => matchedIds.has(entry.team.id)),
+        featuredFinishers,
+        remainder,
+      };
+    })
+    .filter((group) => group.entries.length > 0);
 
-  if (!visibleGroups.length) {
-    container.innerHTML = '<div class="empty-state">No category results are available yet.</div>';
+  if (!matchedGroups.length) {
+    container.innerHTML = `<div class="empty-state">${
+      query
+        ? `No boats or racers matched "${escapeHtml(state.searchQuery.trim())}".`
+        : "No category results are available yet."
+    }</div>`;
     return;
   }
 
-  container.innerHTML = visibleGroups.map((group) => `
-    <article class="category-card" id="category-${escapeHtml(group.category.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-"))}">
-      <header class="category-card-header">
-        <div>
-          <p class="category-kicker">${escapeHtml(group.sublabel)}</p>
-          <h3>${escapeHtml(group.category)}</h3>
-        </div>
-        <span class="category-count">${group.teams.length} ${group.teams.length === 1 ? "entry" : "entries"}</span>
-      </header>
-      <div class="leaderboard-list">
-        ${group.teams.length
-          ? group.teams.map((entry) => {
-              const isFinished = entry.status === "finished";
-              const statusClass = isFinished ? podiumClass(entry.place) : `status-${entry.status}`;
-              const placeDisplay = isFinished ? entry.place : entry.status === "dnf" ? "DNF" : "LIVE";
-              const statusMeta = isFinished
-                ? `Overall #${entry.overall}`
-                : entry.status === "dnf"
-                  ? "Did not finish"
-                  : statusLabel(entry.status);
-
-              return `
-                <article class="leaderboard-row ${statusClass}">
-                  <div class="leaderboard-place">
-                    <span class="place-badge">${escapeHtml(placeDisplay)}</span>
-                  </div>
-                  <div class="leaderboard-main">
-                    <div class="leaderboard-title-row">
-                      <span class="boat-chip boat-chip-strong">Boat ${escapeHtml(entry.team.boatNumber || "-")}</span>
-                      <h4>${escapeHtml(entry.label)}</h4>
-                    </div>
-                    <p class="leaderboard-meta">${escapeHtml(statusMeta)}</p>
-                  </div>
-                  <div class="leaderboard-time">
-                    <strong>${escapeHtml(entry.time)}</strong>
-                  </div>
-                </article>
-              `;
-            }).join("")
-          : '<div class="empty-state">No teams registered in this category yet.</div>'}
-      </div>
-    </article>
-  `).join("");
+  container.innerHTML = matchedGroups.map((group) => renderCategoryCard(group)).join("");
 }
 
 function renderScorecard() {
@@ -333,9 +510,15 @@ document.querySelector("#category-filter-select")?.addEventListener("change", (e
   }
 });
 
+document.querySelector("#scorecard-search-input")?.addEventListener("input", debounce((event) => {
+  state.searchQuery = event.target.value || "";
+  renderScorecard();
+}, SEARCH_INPUT_DEBOUNCE_MS));
+
 bindCompactHeader();
 
 window.setInterval(() => {
+  if (document.hidden) return;
   void refreshScorecard();
 }, POLL_MS);
 

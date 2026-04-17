@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wild Hog Race Control</title>
-  <link rel="stylesheet" href="racecontrol.css?v=20260415-2" />
+  <link rel="stylesheet" href="racecontrol.css?v=20260417-2" />
 </head>
 <body>
   <header class="board-header">
@@ -67,7 +67,19 @@
               <p class="panel-kicker">Live Operations</p>
               <h2>Still Racing</h2>
             </div>
-            <p id="still-racing-summary" class="panel-summary">0 boats on course</p>
+            <div class="panel-header-side">
+              <p id="still-racing-summary" class="panel-summary">0 boats on course</p>
+              <button
+                type="button"
+                id="still-racing-toggle"
+                class="panel-toggle"
+                aria-expanded="false"
+                aria-controls="still-racing-list"
+                hidden
+              >
+                Show all
+              </button>
+            </div>
           </div>
           <div id="still-racing-list" class="panel-list"></div>
         </article>
@@ -190,6 +202,6 @@
     </section>
   </main>
 
-  <script type="module" src="racecontrol.js?v=20260415-2"></script>
+  <script type="module" src="racecontrol.js?v=20260417-2"></script>
 </body>
 </html>
