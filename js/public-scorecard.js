@@ -12,8 +12,9 @@ import {
 } from "./shared/race-view.js";
 import { fetchSnapshot } from "./shared/public-fetch.js";
 
+const STATIC_PUBLIC_SCORECARD_ENABLED = true;
+const STATIC_PUBLIC_SCORECARD_PATH = "/final-scorecard.json";
 const API_PATH = "/api/public-scorecard";
-const POLL_MS = 15000;
 const HIGHLIGHT_LIMIT = 5;
 const SEARCH_INPUT_DEBOUNCE_MS = 120;
 
@@ -24,6 +25,7 @@ const state = {
   selectedCategory: "all",
   searchQuery: "",
   compactHeader: false,
+  collapsedCategories: new Set(),
 };
 
 const COMPACT_HEADER_SCROLL_Y = 48;
@@ -56,11 +58,24 @@ function visibleCategory(team) {
   return displayCategoryName(normalizedCategory(team));
 }
 
+function categoryDomKey(category) {
+  return String(category || "uncategorized").toLowerCase().replaceAll(/[^a-z0-9]+/g, "-");
+}
+
+function activePublicScorecardPath() {
+  return STATIC_PUBLIC_SCORECARD_ENABLED ? STATIC_PUBLIC_SCORECARD_PATH : API_PATH;
+}
+
 function formatUpdatedStatus(value) {
-  if (!value) return "Live Updates • Waiting for data";
+  if (!value) return "Results locked";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "Live Updates • Waiting for data";
-  return `Live Updates • Updated ${parsed.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}`;
+  if (Number.isNaN(parsed.getTime())) return "Results locked";
+  return `Results locked • Updated ${parsed.toLocaleString([], {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  })}`;
 }
 
 function setConnection(status, message) {
@@ -76,13 +91,12 @@ function setUpdatedAt(value) {
 }
 
 function renderSummary(teams, updatedAt) {
+  const unfinishedCount = teams.filter((team) => !team.finishTime && !team.didNotFinish).length;
   document.querySelector("#scorecard-summary-total").textContent = String(teams.length);
   document.querySelector("#scorecard-summary-finished").textContent = String(
     teams.filter((team) => team.finishTime && !team.didNotFinish).length,
   );
-  document.querySelector("#scorecard-summary-racing").textContent = String(
-    teams.filter((team) => team.startTime && !team.finishTime && !team.didNotFinish).length,
-  );
+  document.querySelector("#scorecard-summary-racing").textContent = String(unfinishedCount);
   document.querySelector("#scorecard-summary-dnf").textContent = String(
     teams.filter((team) => team.didNotFinish).length,
   );
@@ -161,7 +175,7 @@ function buildCategoryGroups(teams, standings, categoryOrder) {
       remainingCount,
       isFinal,
       progressPercent: totalEntries ? Math.round((finishedCount / totalEntries) * 100) : 0,
-      eyebrow: isFinal ? "Final Results" : "Live Standings",
+      eyebrow: "Final standings",
       remainder: entries.filter((entry) => !featuredFinishers.some((finisher) => finisher.team.id === entry.team.id)),
     };
   });
@@ -299,7 +313,7 @@ function renderSummaryChips(group) {
 }
 
 function renderProgressBar(group) {
-  if (group.isFinal || group.totalEntries === 0) return "";
+  if (STATIC_PUBLIC_SCORECARD_ENABLED || group.isFinal || group.totalEntries === 0) return "";
   return `
     <div class="category-progress" aria-label="${escapeHtml(`${group.finishedCount} of ${group.totalEntries} finished`)}">
       <div class="category-progress-track">
@@ -341,45 +355,60 @@ function renderResultRow(entry, options = {}) {
 }
 
 function renderCategoryCard(group) {
-  const categoryKey = group.category.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-");
+  const categoryKey = categoryDomKey(group.category);
+  const searchActive = Boolean(state.searchQuery.trim());
+  const expanded = searchActive || !state.collapsedCategories.has(group.category);
+  const panelId = `category-panel-${categoryKey}`;
+  const finalResultsMode = STATIC_PUBLIC_SCORECARD_ENABLED || group.isFinal;
   return `
-    <article class="category-card" data-state="${group.isFinal ? "final" : "live"}" data-category-key="${escapeHtml(categoryKey)}" id="category-${escapeHtml(categoryKey)}">
+    <article class="category-card ${expanded ? "is-expanded" : "is-collapsed"}" data-state="${finalResultsMode ? "final" : "live"}" data-category-key="${escapeHtml(categoryKey)}" id="category-${escapeHtml(categoryKey)}">
       <header class="category-card-header">
-        <div class="category-card-title">
-          <p class="category-kicker">${escapeHtml(group.eyebrow)}</p>
-          <h3>${escapeHtml(displayCategoryName(group.category))}</h3>
+        <div class="category-card-heading-row">
+          <div class="category-card-title">
+            <p class="category-kicker">${escapeHtml(group.eyebrow)}</p>
+            <h3>${escapeHtml(displayCategoryName(group.category))}</h3>
+          </div>
+          <button
+            type="button"
+            class="category-card-toggle"
+            data-category-toggle="${escapeHtml(group.category)}"
+            aria-expanded="${expanded ? "true" : "false"}"
+            aria-controls="${escapeHtml(panelId)}"
+            ${searchActive ? 'disabled aria-disabled="true"' : ""}
+          >
+            <span class="category-toggle-label">${searchActive ? "Filtered" : expanded ? "Collapse" : "Expand"}</span>
+            <span class="category-toggle-icon" aria-hidden="true"></span>
+          </button>
         </div>
         <div class="category-summary-chips">
           ${renderSummaryChips(group)}
         </div>
         ${renderProgressBar(group)}
       </header>
-      ${group.isFinal
+      <div id="${escapeHtml(panelId)}" class="${finalResultsMode ? "category-card-body category-card-body-final" : "category-card-body"}" ${expanded ? "" : "hidden"}>
+        ${finalResultsMode
         ? `
-          <div class="category-card-body category-card-body-final">
-            <div class="leaderboard-list final-featured-list">
-              ${group.featuredFinishers.length
-                ? group.featuredFinishers.map((entry) => renderResultRow(entry, { category: group.category })).join("")
-                : '<div class="empty-state">No finishers have been recorded in this category.</div>'}
-            </div>
-            ${group.remainder.length
-              ? `
-                <div class="leaderboard-list leaderboard-list-tight">
-                  ${group.remainder.map((entry) => renderResultRow(entry, { compact: true, category: group.category })).join("")}
-                </div>
-              `
-              : ""}
+          <div class="leaderboard-list final-featured-list">
+            ${group.featuredFinishers.length
+              ? group.featuredFinishers.map((entry) => renderResultRow(entry, { category: group.category })).join("")
+              : '<div class="empty-state">No finishers have been recorded in this category.</div>'}
           </div>
+          ${group.remainder.length
+            ? `
+              <div class="leaderboard-list leaderboard-list-tight">
+                ${group.remainder.map((entry) => renderResultRow(entry, { compact: true, category: group.category })).join("")}
+              </div>
+            `
+            : ""}
         `
         : `
-          <div class="category-card-body">
-            <div class="leaderboard-list">
-              ${group.entries.length
-                ? group.entries.map((entry) => renderResultRow(entry, { category: group.category })).join("")
-                : '<div class="empty-state">No teams registered in this category yet.</div>'}
-            </div>
+          <div class="leaderboard-list">
+            ${group.entries.length
+              ? group.entries.map((entry) => renderResultRow(entry, { category: group.category })).join("")
+              : '<div class="empty-state">No teams registered in this category yet.</div>'}
           </div>
         `}
+      </div>
     </article>
   `;
 }
@@ -437,20 +466,21 @@ function renderScorecard() {
   renderHighlightList(
     document.querySelector("#public-latest-finishers"),
     latestFinishers(teams),
-    "No finishers recorded yet.",
+    "No finishers were recorded in the final snapshot.",
   );
   renderHighlightList(
     document.querySelector("#public-top-overall"),
     topOverall(standings),
-    "Standings will appear as finish times are recorded.",
+    "Final overall standings are shown below.",
     true,
   );
   renderCategoryGroups(categoryGroups);
 
   if (summary) {
     const finished = teams.filter((team) => team.finishTime && !team.didNotFinish).length;
-    const racing = teams.filter((team) => team.startTime && !team.finishTime && !team.didNotFinish).length;
-    summary.textContent = `${finished} finished, ${racing} still racing across ${categoryOrder.length} categories.`;
+    const dnf = teams.filter((team) => team.didNotFinish).length;
+    const unfinished = teams.filter((team) => !team.finishTime && !team.didNotFinish).length;
+    summary.textContent = `${finished} finishers, ${dnf} DNF, ${unfinished} without a finish time across ${categoryOrder.length} categories.`;
   }
 }
 
@@ -483,17 +513,17 @@ function bindCompactHeader() {
 async function refreshScorecard() {
   if (state.refreshInFlight) return;
   state.refreshInFlight = true;
-  setConnection("loading", state.payload ? formatUpdatedStatus(state.payload.state?.updatedAt || null) : "Live Updates • Waiting for data");
+  setConnection("loading", state.payload ? formatUpdatedStatus(state.payload.state?.updatedAt || null) : "Loading official final results...");
   try {
-    const result = await fetchSnapshot(API_PATH, state.snapshotId);
+    const result = await fetchSnapshot(activePublicScorecardPath(), state.snapshotId);
     state.snapshotId = result.snapshotId || state.snapshotId;
     if (result.changed && result.payload) {
       state.payload = result.payload;
       renderScorecard();
     }
-    setConnection("live", formatUpdatedStatus(state.payload?.state?.updatedAt || null));
+    setConnection("final", formatUpdatedStatus(state.payload?.state?.updatedAt || null));
   } catch {
-    setConnection("offline", "Live Updates • Feed offline");
+    setConnection("offline", "Official final results unavailable");
   } finally {
     state.refreshInFlight = false;
   }
@@ -515,11 +545,29 @@ document.querySelector("#scorecard-search-input")?.addEventListener("input", deb
   renderScorecard();
 }, SEARCH_INPUT_DEBOUNCE_MS));
 
+document.querySelector("#public-category-groups")?.addEventListener("click", (event) => {
+  const toggle = event.target.closest("[data-category-toggle]");
+  if (!toggle || toggle.hasAttribute("disabled")) return;
+
+  const { categoryToggle } = toggle.dataset;
+  if (!categoryToggle) return;
+
+  if (state.collapsedCategories.has(categoryToggle)) {
+    state.collapsedCategories.delete(categoryToggle);
+  } else {
+    state.collapsedCategories.add(categoryToggle);
+  }
+
+  renderScorecard();
+});
+
 bindCompactHeader();
 
-window.setInterval(() => {
-  if (document.hidden) return;
-  void refreshScorecard();
-}, POLL_MS);
+if (!STATIC_PUBLIC_SCORECARD_ENABLED) {
+  window.setInterval(() => {
+    if (document.hidden) return;
+    void refreshScorecard();
+  }, 15000);
+}
 
 void refreshScorecard();

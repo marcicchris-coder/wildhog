@@ -25,9 +25,18 @@ export async function fetchSnapshot(apiPath, snapshotId = null) {
   }
 
   const payload = await response.json();
+  const normalizedPayload = payload
+    && typeof payload === "object"
+    && !Array.isArray(payload)
+    && Object.prototype.hasOwnProperty.call(payload, "state")
+    ? payload
+    : {
+        state: payload,
+        snapshotId: null,
+      };
   return {
     changed: true,
-    snapshotId: payload.snapshotId || snapshotId || null,
-    payload,
+    snapshotId: normalizedPayload.snapshotId || snapshotId || null,
+    payload: normalizedPayload,
   };
 }

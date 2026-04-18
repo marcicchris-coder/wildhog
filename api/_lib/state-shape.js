@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 
-const SCHEMA_VERSION = 3;
+const SCHEMA_VERSION = 4;
 
 function isoNow() {
   return new Date().toISOString();
@@ -33,6 +33,67 @@ function normalizeFinish(entry, fallbackUpdatedAt) {
   };
 }
 
+function normalizeTimingLogSequence(value) {
+  const sequence = Number(value);
+  return Number.isInteger(sequence) && sequence > 0 ? sequence : null;
+}
+
+function cloneLogValue(value, fallback = null) {
+  if (value == null) return fallback;
+  try {
+    return JSON.parse(JSON.stringify(value));
+  } catch {
+    return fallback;
+  }
+}
+
+function normalizeTimingLogEntry(entry, source, fallbackUpdatedAt, sequenceState) {
+  if (!entry || typeof entry !== "object") return null;
+  const boatNumber = String(entry.boatNumber || "").trim().toUpperCase();
+  const type = String(entry.type || "").trim();
+  if (!boatNumber || !type) return null;
+
+  const seq = normalizeTimingLogSequence(entry.seq) || sequenceState.next++;
+  const recordedAt = normalizeTimestamp(entry.recordedAt, null);
+  return {
+    id: String(entry.id || `${source}-${seq}`),
+    seq,
+    ts: normalizeTimestamp(entry.ts, fallbackUpdatedAt),
+    type,
+    boatNumber,
+    teamId: entry.teamId == null || entry.teamId === "" ? null : String(entry.teamId),
+    source,
+    recordedAt,
+    displayedTime: entry.displayedTime == null || entry.displayedTime === "" ? null : String(entry.displayedTime),
+    actor: String(entry.actor || "local-operator"),
+    payload: cloneLogValue(entry.payload, {}) || {},
+    before: cloneLogValue(entry.before, null),
+    after: cloneLogValue(entry.after, null),
+    scratchText: String(entry.scratchText || "").trim(),
+  };
+}
+
+function normalizeTimingLogCollection(entries, source, fallbackUpdatedAt, sequenceState) {
+  return (Array.isArray(entries) ? entries : [])
+    .map((entry) => normalizeTimingLogEntry(entry, source, fallbackUpdatedAt, sequenceState))
+    .filter(Boolean)
+    .sort((left, right) => {
+      if (left.seq !== right.seq) return left.seq - right.seq;
+      const leftTs = Date.parse(left.ts || "") || 0;
+      const rightTs = Date.parse(right.ts || "") || 0;
+      if (leftTs !== rightTs) return leftTs - rightTs;
+      return left.id.localeCompare(right.id);
+    });
+}
+
+function nextTimingLogSequenceValue(source = {}) {
+  const maxSequence = [
+    ...(Array.isArray(source.startLineLog) ? source.startLineLog : []),
+    ...(Array.isArray(source.finishLineLog) ? source.finishLineLog : []),
+  ].reduce((max, entry) => Math.max(max, normalizeTimingLogSequence(entry?.seq) || 0), 0);
+  return maxSequence + 1 || 1;
+}
+
 export function getStateSchemaVersion() {
   return SCHEMA_VERSION;
 }
@@ -44,6 +105,9 @@ export function createEmptyPersistedState() {
     updatedAt: now,
     teams: [],
     finishes: [],
+    startLineLog: [],
+    finishLineLog: [],
+    timingLogSequence: 1,
     scorecardCategoryOrderMain: [],
     scorecardCategoryOrderDisplay: [],
     scorecardCategoryOrderMainUpdatedAt: now,
@@ -54,6 +118,26 @@ export function createEmptyPersistedState() {
 export function normalizePersistedState(input) {
   const source = input && typeof input === "object" ? input : {};
   const fallbackUpdatedAt = normalizeTimestamp(source.updatedAt, isoNow());
+  const highestExistingSequence = Math.max(
+    ...[
+      ...(Array.isArray(source.startLineLog) ? source.startLineLog : []),
+      ...(Array.isArray(source.finishLineLog) ? source.finishLineLog : []),
+    ].map((entry) => normalizeTimingLogSequence(entry?.seq) || 0),
+    0,
+  );
+  const sequenceState = { next: highestExistingSequence + 1 };
+  const startLineLog = normalizeTimingLogCollection(
+    source.startLineLog,
+    "start-line",
+    fallbackUpdatedAt,
+    sequenceState,
+  );
+  const finishLineLog = normalizeTimingLogCollection(
+    source.finishLineLog,
+    "finish",
+    fallbackUpdatedAt,
+    sequenceState,
+  );
 
   return {
     schemaVersion: Number.isFinite(Number(source.schemaVersion))
@@ -66,6 +150,13 @@ export function normalizePersistedState(input) {
     finishes: Array.isArray(source.finishes)
       ? source.finishes.map((entry) => normalizeFinish(entry, fallbackUpdatedAt)).filter(Boolean)
       : [],
+    startLineLog,
+    finishLineLog,
+    timingLogSequence: Math.max(
+      normalizeTimingLogSequence(source.timingLogSequence) || 0,
+      nextTimingLogSequenceValue({ startLineLog, finishLineLog }),
+      sequenceState.next,
+    ),
     scorecardCategoryOrderMain: Array.isArray(source.scorecardCategoryOrderMain)
       ? source.scorecardCategoryOrderMain.filter(Boolean)
       : Array.isArray(source.scorecardCategoryOrder)

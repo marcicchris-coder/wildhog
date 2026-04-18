@@ -1,0 +1,2077 @@
+{
+  "source": "orders_2026-04-15_18-52.csv",
+  "teamCount": 109,
+  "teams": [
+    {
+      "id": "team-001",
+      "boatNumber": "",
+      "phone": "5102292854",
+      "category": "Recreation",
+      "telephone": "5102292854",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Peter",
+        "last": "Ledochowitsch"
+      },
+      "racer2": {
+        "first": "Jesse",
+        "last": "Price"
+      },
+      "notes": "349 Rocky Bay Rd, Friday Harbor | ledochowitsch@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-002",
+      "boatNumber": "",
+      "phone": "3522226785",
+      "category": "Men's Kayak",
+      "telephone": "3522226785",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Sean",
+        "last": "Tate"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "11146 NW 18th Road, Gainesville, FL, 32606 | s54tate@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-003",
+      "boatNumber": "",
+      "phone": "3522405976",
+      "category": "Recreation",
+      "telephone": "3522405976",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ben",
+        "last": "Mercier"
+      },
+      "racer2": {
+        "first": "Jackson",
+        "last": "McCallum"
+      },
+      "notes": "8008 NW 184th Drive, Alachua, FL 32615 | brookamercier@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-004",
+      "boatNumber": "",
+      "phone": "3523560014",
+      "category": "Women's",
+      "telephone": "3523560014",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Andrea R",
+        "last": "Layfield"
+      },
+      "racer2": {
+        "first": "Angel",
+        "last": "Doty"
+      },
+      "notes": "500 W Park Ave Apt 103, Chiefland | Ajac1606@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-005",
+      "boatNumber": "",
+      "phone": "3523560014",
+      "category": "Recreation",
+      "telephone": "3523560014",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Hunter",
+        "last": "Boyd"
+      },
+      "racer2": {
+        "first": "Jolan",
+        "last": "Doty"
+      },
+      "notes": "500 W Park Ave Apt 103, Chiefland | Ajac1606@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-006",
+      "boatNumber": "",
+      "phone": "3522578160",
+      "category": "Parent/Youth",
+      "telephone": "3522578160",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Brook",
+        "last": "Mecier"
+      },
+      "racer2": {
+        "first": "Jedidiah",
+        "last": "Canova"
+      },
+      "notes": "372 E Joshua Ct, HERNANDO | beckyc4508@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-007",
+      "boatNumber": "",
+      "phone": "3528163212",
+      "category": "Mixed",
+      "telephone": "3528163212",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Mason",
+        "last": "Collins"
+      },
+      "racer2": {
+        "first": "Audrey",
+        "last": "Collins"
+      },
+      "notes": "11491 SW 70th Place, Cedar Key, Fl 32625 | shelnck@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-008",
+      "boatNumber": "",
+      "phone": "7244945550",
+      "category": "Mixed",
+      "telephone": "7244945550",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Jordan",
+        "last": "Militello"
+      },
+      "racer2": {
+        "first": "Robert",
+        "last": "Forsythe"
+      },
+      "notes": "200 country club dr unit 907, Largo, Fl 33771 | jmili15@comcast.net",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-009",
+      "boatNumber": "",
+      "phone": "3522560773",
+      "category": "Parent/Youth",
+      "telephone": "3522560773",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Rhet",
+        "last": "Cooper"
+      },
+      "racer2": {
+        "first": "Aiden",
+        "last": "Byrd"
+      },
+      "notes": "PO Box 1351, Bronson, FL 32621 | lacilynncooper@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-010",
+      "boatNumber": "",
+      "phone": "4077193777",
+      "category": "Men's Kayak",
+      "telephone": "4077193777",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Adam",
+        "last": "Stefanik"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "3037 Moore Dr, Oviedo, FL, 32765 | Contact@thestefanik.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-011",
+      "boatNumber": "",
+      "phone": "6302808149",
+      "category": "Mixed",
+      "telephone": "6302808149",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Sofia",
+        "last": "Neill"
+      },
+      "racer2": {
+        "first": "Joseph",
+        "last": "Hudson-Hull"
+      },
+      "notes": "1111 W University Ave, Gainesville, FL, 32601 | sofiamneill@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-012",
+      "boatNumber": "",
+      "phone": "8134841699",
+      "category": "Parent/Youth",
+      "telephone": "8134841699",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "George",
+        "last": "Garner"
+      },
+      "racer2": {
+        "first": "Zachary",
+        "last": "Garner"
+      },
+      "notes": "13420 Graham Yarden Dr., Riverview, Fl. 33579 | georgegarner87@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-013",
+      "boatNumber": "",
+      "phone": "3523150838",
+      "category": "Recreation",
+      "telephone": "3523150838",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Rhett",
+        "last": "cunningham"
+      },
+      "racer2": {
+        "first": "Levi",
+        "last": "warmack"
+      },
+      "notes": "12570 NE 108th Terr, Archer fl 32618 | Rhett_cunningham98@icloud.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-014",
+      "boatNumber": "",
+      "phone": "3525387705",
+      "category": "Mixed",
+      "telephone": "3525387705",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Will",
+        "last": "Whitehurst"
+      },
+      "racer2": {
+        "first": "Randa",
+        "last": "Whitehurst"
+      },
+      "notes": "936 nw 7th st, Williston, Fl 32696 | Wmwhitehurst@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-015",
+      "boatNumber": "",
+      "phone": "3863375027",
+      "category": "Mixed",
+      "telephone": "3863375027",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ladan",
+        "last": "Jiracek"
+      },
+      "racer2": {
+        "first": "May",
+        "last": "Mansy"
+      },
+      "notes": "1629 NW 119th terrace, Gainesville | ladan94@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-016",
+      "boatNumber": "",
+      "phone": "3059518046",
+      "category": "Senior Kayak",
+      "telephone": "3059518046",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Karen",
+        "last": "songdahl"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "10283 W Riverwood Dr, 34428 | kdahl37@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-017",
+      "boatNumber": "",
+      "phone": "9155438995",
+      "category": "Parent/Youth",
+      "telephone": "9155438995",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Elmer",
+        "last": "Deskins"
+      },
+      "racer2": {
+        "first": "Aiden",
+        "last": "McCullars"
+      },
+      "notes": "3409 W Fairbank Dr, 34433 | nicole.mccullars85@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-018",
+      "boatNumber": "",
+      "phone": "3864380155",
+      "category": "Parent/Youth",
+      "telephone": "3864380155",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Richard",
+        "last": "Nico"
+      },
+      "racer2": {
+        "first": "River",
+        "last": "Nico"
+      },
+      "notes": "576 sw feather ln, FORT WHITE | dma.rdn2@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-019",
+      "boatNumber": "",
+      "phone": "9418121314",
+      "category": "Recreation",
+      "telephone": "9418121314",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Adam",
+        "last": "Kirkland"
+      },
+      "racer2": {
+        "first": "John",
+        "last": "Buys"
+      },
+      "notes": "524 Gulf Bay Rd, Longboat Key | amkland8@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-020",
+      "boatNumber": "",
+      "phone": "3523161697",
+      "category": "Recreation",
+      "telephone": "3523161697",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Hoss",
+        "last": "Marino"
+      },
+      "racer2": {
+        "first": "Carl",
+        "last": "Gilley"
+      },
+      "notes": "210 NE 6th BLVD, Williston, FL. 32696 | Hossmarino@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-021",
+      "boatNumber": "",
+      "phone": "8502289081",
+      "category": "Parent/Youth",
+      "telephone": "8502289081",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Russ",
+        "last": "Forstall"
+      },
+      "racer2": {
+        "first": "Emerson",
+        "last": "Forstall"
+      },
+      "notes": "1903 Gibbs Dr., Tallahassee | russ4stall@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-022",
+      "boatNumber": "",
+      "phone": "7328651441",
+      "category": "Recreation",
+      "telephone": "7328651441",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ryan",
+        "last": "Johnson"
+      },
+      "racer2": {
+        "first": "Kevin",
+        "last": "Johnson"
+      },
+      "notes": "3055 Berkley Square Way, Vero Beach | ryan.johnson.m@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-023",
+      "boatNumber": "",
+      "phone": "3526817291",
+      "category": "Recreation",
+      "telephone": "3526817291",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Micah",
+        "last": "Tavernari"
+      },
+      "racer2": {
+        "first": "Josiah",
+        "last": "Tavernari"
+      },
+      "notes": "PO Box 1123, High Springs , FL 32655 | CALEBTAVERNARI@GMAIL.COM",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-024",
+      "boatNumber": "",
+      "phone": "4062601260",
+      "category": "Men's Kayak",
+      "telephone": "4062601260",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Joe",
+        "last": "Smallfelt"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "915 NW 39th Dr, Gainesville, FL 32605 | jcsmallfelt@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-025",
+      "boatNumber": "",
+      "phone": "3522264217",
+      "category": "Women's",
+      "telephone": "3522264217",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Judith",
+        "last": "Herron"
+      },
+      "racer2": {
+        "first": "Isabel",
+        "last": "McNulty"
+      },
+      "notes": "9051 NE 137th CT, Williston FL, 32696 | judithlynne2004@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-026",
+      "boatNumber": "",
+      "phone": "3527270590",
+      "category": "Mixed",
+      "telephone": "3527270590",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Zane",
+        "last": "Bedford"
+      },
+      "racer2": {
+        "first": "Kendall",
+        "last": "Meeks"
+      },
+      "notes": "2850 Ne County Road 337 Bronson fl, Bronson Florida 32621 | zanebed1@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-027",
+      "boatNumber": "",
+      "phone": "8137815356",
+      "category": "Mixed",
+      "telephone": "8137815356",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Jim",
+        "last": ""
+      },
+      "racer2": {
+        "first": "Emily",
+        "last": ""
+      },
+      "notes": "1504 West Meadowbrook Ave, Tampa Fl 33612 | Scorch149@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-028",
+      "boatNumber": "",
+      "phone": "3524226437",
+      "category": "Paddle Board",
+      "telephone": "3524226437",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Elisha S",
+        "last": "Bragdon"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "1350 Northeast 7th Avenue, Crystal River | elishagibsonscuba@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-029",
+      "boatNumber": "",
+      "phone": "8147690310",
+      "category": "Mixed",
+      "telephone": "8147690310",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Kelly",
+        "last": "Forbes"
+      },
+      "racer2": {
+        "first": "Harrison",
+        "last": "Forbes"
+      },
+      "notes": "4065 N Eagle Nest Pt, Crystal River Fl 34428 | kellyanneannesmith@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-030",
+      "boatNumber": "",
+      "phone": "9375369295",
+      "category": "Mixed",
+      "telephone": "9375369295",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Robert",
+        "last": "Watson"
+      },
+      "racer2": {
+        "first": "Sage",
+        "last": "Gilbert"
+      },
+      "notes": "205 Gayles Lane, Front Royal | WatsonRF@hotmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-031",
+      "boatNumber": "",
+      "phone": "3526817594",
+      "category": "Recreation",
+      "telephone": "3526817594",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Logan",
+        "last": "Taylor"
+      },
+      "racer2": {
+        "first": "Noam",
+        "last": "Zinn"
+      },
+      "notes": "5063 Sw 91st Dr., Gainesville, Fl, 32608 | lntaylor292@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-032",
+      "boatNumber": "",
+      "phone": "3524568085",
+      "category": "Women's Kayak",
+      "telephone": "3524568085",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Emily",
+        "last": "Zamora"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "12250 SE 57TH SREET, MORRISTON, FL 32668 | joshuiaalan@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-033",
+      "boatNumber": "",
+      "phone": "7272815192",
+      "category": "Senior",
+      "telephone": "7272815192",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Stephen R",
+        "last": "Canning"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "4546 21st ST N, St Petersburg, Fl, 33714 | lnby505@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-034",
+      "boatNumber": "",
+      "phone": "4077585980",
+      "category": "Women's Kayak",
+      "telephone": "4077585980",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ashley",
+        "last": "Roque"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "5930 Swoffield Dr, Orlando | ashley.brocious23@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-035",
+      "boatNumber": "",
+      "phone": "4077585980",
+      "category": "Men's Kayak",
+      "telephone": "4077585980",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Tyson",
+        "last": "Brocious"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "5930 Swoffield Drive, Orlando Fl 32812 | ashley.brocious23@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-036",
+      "boatNumber": "",
+      "phone": "9196337392",
+      "category": "Men's Kayak",
+      "telephone": "9196337392",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Michael",
+        "last": "Best"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "111 Dogwood lane, Trent woods, NC, 28562 | mebest138@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-037",
+      "boatNumber": "",
+      "phone": "3529495622",
+      "category": "Recreation",
+      "telephone": "3529495622",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Chris",
+        "last": "Owens"
+      },
+      "racer2": {
+        "first": "Tres",
+        "last": "Owens"
+      },
+      "notes": "PO BOX 142, GULF HAMMOCK | chrisnmissy04@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-038",
+      "boatNumber": "",
+      "phone": "9413219099",
+      "category": "Paddle Board",
+      "telephone": "9413219099",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Troy",
+        "last": "Gills"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "2630 NW 74th Terrace, Chiefland | gillsrobert2@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-039",
+      "boatNumber": "",
+      "phone": "8503764364",
+      "category": "Paddle Board",
+      "telephone": "8503764364",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Melanie",
+        "last": "Engle"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "1654 Champagne Ave, Gulf Breeze, FL 32563 | Grvygrl2003@aol.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-040",
+      "boatNumber": "",
+      "phone": "3523188433",
+      "category": "Experienced",
+      "telephone": "3523188433",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Nelson",
+        "last": "Langley"
+      },
+      "racer2": {
+        "first": "Frank",
+        "last": "Langley"
+      },
+      "notes": "4444 NW 34th Terrace, Gainesville, Fl 32605 | usdiver2002@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-041",
+      "boatNumber": "",
+      "phone": "3522578160",
+      "category": "Youth",
+      "telephone": "3522578160",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Samuel",
+        "last": "Canova"
+      },
+      "racer2": {
+        "first": "Simeon",
+        "last": "Smith"
+      },
+      "notes": "372 E Joshua Ct, HERNANDO | beckyc4508@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-042",
+      "boatNumber": "",
+      "phone": "3528950377",
+      "category": "Youth",
+      "telephone": "3528950377",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Caleb",
+        "last": "Canova"
+      },
+      "racer2": {
+        "first": "Micah",
+        "last": "Smith"
+      },
+      "notes": "13051 SE 98th St, Dunnellon Florida 34431 | calebcanova7@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-043",
+      "boatNumber": "",
+      "phone": "3012043529",
+      "category": "Women's Kayak",
+      "telephone": "3012043529",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Sue",
+        "last": "Pitra"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "2005 Morris Street, Eustis, FL  32726 | porojetta@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-044",
+      "boatNumber": "",
+      "phone": "2399196001",
+      "category": "Recreation",
+      "telephone": "2399196001",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Chase",
+        "last": "Provencher"
+      },
+      "racer2": {
+        "first": "Magda",
+        "last": "GelvesProvencher"
+      },
+      "notes": "14621 SW 124 Pl, Miami | magelves@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-045",
+      "boatNumber": "",
+      "phone": "9108501874",
+      "category": "Men's Kayak",
+      "telephone": "9108501874",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Blake",
+        "last": "Sowers"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "17750 ne 75th st, Williston | wsowers19@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-046",
+      "boatNumber": "",
+      "phone": "3526654594",
+      "category": "Women's",
+      "telephone": "3526654594",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Kelsey",
+        "last": "Mills"
+      },
+      "racer2": {
+        "first": "Amanda",
+        "last": "Simmons"
+      },
+      "notes": "P.O. Box 296, Bronson Fl 32621 | Kelseymills19@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-047",
+      "boatNumber": "",
+      "phone": "3523166801",
+      "category": "Mixed",
+      "telephone": "3523166801",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Jared",
+        "last": "Mills"
+      },
+      "racer2": {
+        "first": "Candace",
+        "last": "Brewer"
+      },
+      "notes": "16574 W Highway 326, Morriston | Jared.allen.mills@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-048",
+      "boatNumber": "",
+      "phone": "9417183002",
+      "category": "Recreation",
+      "telephone": "9417183002",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "John",
+        "last": "Angsten"
+      },
+      "racer2": {
+        "first": "Aidan",
+        "last": "Bryant"
+      },
+      "notes": "4915 Ancient Marble Dr, Sarasota, FL, 34240 | johnangsten@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-049",
+      "boatNumber": "",
+      "phone": "3525357066",
+      "category": "Parent/Youth",
+      "telephone": "3525357066",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Joshua",
+        "last": "Musgrave"
+      },
+      "racer2": {
+        "first": "Cooper",
+        "last": "Wetherington"
+      },
+      "notes": "13750 NE 20th Ave, Trenton | rkee08@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-050",
+      "boatNumber": "",
+      "phone": "3525357066",
+      "category": "One-man Canoe",
+      "telephone": "3525357066",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Rachel",
+        "last": "Musgrave"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "13750 NE 20th Ave, Trenton | rkee08@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-051",
+      "boatNumber": "",
+      "phone": "8133918069",
+      "category": "Women's",
+      "telephone": "8133918069",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Tracy",
+        "last": "Davis"
+      },
+      "racer2": {
+        "first": "Amber",
+        "last": "Davis"
+      },
+      "notes": "6484 W Park Dr, Homosassa FL 34446 | traceco313@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-052",
+      "boatNumber": "",
+      "phone": "3522212231",
+      "category": "Recreation",
+      "telephone": "3522212231",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Thurman",
+        "last": "Bailey"
+      },
+      "racer2": {
+        "first": "Matt",
+        "last": "kuhl"
+      },
+      "notes": "550 us highway 27, Chiefland, Florida, 32626 | Thurmanbailey13@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-053",
+      "boatNumber": "",
+      "phone": "8503051190",
+      "category": "Senior Kayak",
+      "telephone": "8503051190",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Rich",
+        "last": "Woods"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "518 Tikell Dr., Crestview, Fl,32536 | we5rwoods@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-054",
+      "boatNumber": "",
+      "phone": "8502327457",
+      "category": "Women's Kayak",
+      "telephone": "8502327457",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Holley",
+        "last": "Daniel"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "7594 Northpointe Blvd, Pensacola | holleydaniel1979@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-055",
+      "boatNumber": "",
+      "phone": "8503808993",
+      "category": "Women's Kayak",
+      "telephone": "8503808993",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "SHERA",
+        "last": "CHILDRESS"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "5710 ROLYAT RD, MILTON | Sherachildress@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-056",
+      "boatNumber": "",
+      "phone": "7327733815",
+      "category": "Senior Kayak",
+      "telephone": "7327733815",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Shelly",
+        "last": "Armstrong"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "129 E Longport Ave, 08740 | shelliken@aol.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-057",
+      "boatNumber": "",
+      "phone": "4074560934",
+      "category": "Men's Kayak",
+      "telephone": "4074560934",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Vance",
+        "last": "Harris"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "8023 Marshall Circle, Arvada | harrisv25@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-058",
+      "boatNumber": "",
+      "phone": "5612534607",
+      "category": "Senior",
+      "telephone": "5612534607",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Hap",
+        "last": "Harris"
+      },
+      "racer2": {
+        "first": "Vance",
+        "last": "Harris"
+      },
+      "notes": "9037Chisholm Rd, Pensacola Fl 32514 | Snilram03@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-059",
+      "boatNumber": "",
+      "phone": "9413067425",
+      "category": "Women's Kayak",
+      "telephone": "9413067425",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Shari",
+        "last": "Francavilla"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "2262 Teal ave, Sarasota | Cats210@hotmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-060",
+      "boatNumber": "",
+      "phone": "9415397196",
+      "category": "Senior Kayak",
+      "telephone": "9415397196",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Edward",
+        "last": "Francavilla"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "2262 teal ave, Sarasota | frogy130@hotmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-061",
+      "boatNumber": "",
+      "phone": "8137676047",
+      "category": "Senior",
+      "telephone": "8137676047",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Carlos",
+        "last": "Frey"
+      },
+      "racer2": {
+        "first": "Joseph",
+        "last": "Gibbons"
+      },
+      "notes": "3009 W. Fair Oaks Ave, Tampa | Tampatown@verizon.net",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-062",
+      "boatNumber": "",
+      "phone": "2623527232",
+      "category": "Women's Kayak",
+      "telephone": "2623527232",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Katy",
+        "last": "Cummings"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "13481 SW 75th St., CEDAR KEY | katy.e.cummings@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-063",
+      "boatNumber": "",
+      "phone": "3528101011",
+      "category": "Youth",
+      "telephone": "3528101011",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Sylar",
+        "last": "Handy"
+      },
+      "racer2": {
+        "first": "Samuel",
+        "last": "Handy"
+      },
+      "notes": "12171 NE 64th pl, Williston FL 32696 | S.Jowsey89@aol.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-064",
+      "boatNumber": "",
+      "phone": "2402985074",
+      "category": "Recreation",
+      "telephone": "2402985074",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Tyler",
+        "last": "Gunther"
+      },
+      "racer2": {
+        "first": "Callen",
+        "last": "Powell"
+      },
+      "notes": "921 SW Depot Ave, Gainesville, FL 32601 | tylgmd@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-065",
+      "boatNumber": "",
+      "phone": "3525389493",
+      "category": "Parent/Youth",
+      "telephone": "3525389493",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Alexander",
+        "last": "shiver"
+      },
+      "racer2": {
+        "first": "Bailey",
+        "last": "shiver"
+      },
+      "notes": "17031 ne 41st street, 32696 | alexshiver88@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-066",
+      "boatNumber": "",
+      "phone": "3522196094",
+      "category": "Recreation",
+      "telephone": "3522196094",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Felipe",
+        "last": "Quintana"
+      },
+      "racer2": {
+        "first": "Davis",
+        "last": "Boudreaux"
+      },
+      "notes": "3826 Sw 1st Ave, 32607-2702 | felipe.quintana@ufl.edu",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-067",
+      "boatNumber": "",
+      "phone": "3525980446",
+      "category": "Senior Kayak",
+      "telephone": "3525980446",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Douglas",
+        "last": "Richard"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "16575 SE 57TH PLACE, Ocklawaha | drichard128@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-068",
+      "boatNumber": "",
+      "phone": "8507664005",
+      "category": "Women's Kayak",
+      "telephone": "8507664005",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "LeMegan",
+        "last": "Herroon"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "4003 Bothwell Terrace, Tallahassee, FL. 32317 | lemeganherroon@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-069",
+      "boatNumber": "",
+      "phone": "3522262210",
+      "category": "Recreation",
+      "telephone": "3522262210",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Jan",
+        "last": "Spacek"
+      },
+      "racer2": {
+        "first": "Holden",
+        "last": "Alpern"
+      },
+      "notes": "2204 NW 21st Pl, Gainesville | j.h.spacek@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-070",
+      "boatNumber": "",
+      "phone": "3054906847",
+      "category": "Mixed",
+      "telephone": "3054906847",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Alex",
+        "last": ""
+      },
+      "racer2": {
+        "first": "Kristin",
+        "last": ""
+      },
+      "notes": "8072 Cherrystone Street, Leesburg | lacc800@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-071",
+      "boatNumber": "",
+      "phone": "3526820655",
+      "category": "Parent/Youth",
+      "telephone": "3526820655",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Augie",
+        "last": "Montes"
+      },
+      "racer2": {
+        "first": "AJ",
+        "last": "Montes"
+      },
+      "notes": "16060 Ne 50th St, 32696 | augieandvic@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-072",
+      "boatNumber": "",
+      "phone": "7277394075",
+      "category": "Women's",
+      "telephone": "7277394075",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Erica st",
+        "last": "Charles"
+      },
+      "racer2": {
+        "first": "Sarah St",
+        "last": "Charles"
+      },
+      "notes": "2069 Rainbow Drive, Clearwater | ericastcharles92@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-073",
+      "boatNumber": "",
+      "phone": "3523394828",
+      "category": "One-man Canoe",
+      "telephone": "3523394828",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Terry",
+        "last": "Owens"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "P O Box 847, Williston, Florida 32696 | kowens@dental.ufl.edu",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-074",
+      "boatNumber": "",
+      "phone": "3523630950",
+      "category": "Women's",
+      "telephone": "3523630950",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Sarah",
+        "last": "Jowsey"
+      },
+      "racer2": {
+        "first": "Nicole",
+        "last": "Uliano"
+      },
+      "notes": "12171 NE 64th pl, Williston, Fl, 32696 | S.Jowsey89@aol.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-075",
+      "boatNumber": "",
+      "phone": "7273088370",
+      "category": "Men's Kayak",
+      "telephone": "7273088370",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Zachary",
+        "last": "smith"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "5150 4th st, Zephyrhills, FL, 33542 | zacharysmith246@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-076",
+      "boatNumber": "",
+      "phone": "3863164847",
+      "category": "Women's",
+      "telephone": "3863164847",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Lana",
+        "last": "Jackson"
+      },
+      "racer2": {
+        "first": "Stella",
+        "last": "Busby"
+      },
+      "notes": "609 Southwest 10th Lane Apt 2, Gainesville | lanajackson225@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-077",
+      "boatNumber": "",
+      "phone": "3524414071",
+      "category": "Mixed",
+      "telephone": "3524414071",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Taylor",
+        "last": "Joyner"
+      },
+      "racer2": {
+        "first": "Everett",
+        "last": "Byrd"
+      },
+      "notes": "PO Box 97, Morriston FL 32668 | tmj3517@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-078",
+      "boatNumber": "",
+      "phone": "3869655098",
+      "category": "Senior",
+      "telephone": "3869655098",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Leanna",
+        "last": "johnson"
+      },
+      "racer2": {
+        "first": "Mallory",
+        "last": "Becker"
+      },
+      "notes": "622 ne Lancaster street, Trenton Fl 32693 | Johnson2rr@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-079",
+      "boatNumber": "",
+      "phone": "7273857281",
+      "category": "Parent/Youth",
+      "telephone": "7273857281",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Nick",
+        "last": "Watson"
+      },
+      "racer2": {
+        "first": "Skyleigh",
+        "last": "Watson"
+      },
+      "notes": "1050 4th Ave. NW, Largo, FL 33770 | Ngardenking81@aol.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-080",
+      "boatNumber": "",
+      "phone": "7276120901",
+      "category": "Women's Kayak",
+      "telephone": "7276120901",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Katie O\u2019Dom-",
+        "last": "Watson"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "1050 4th Ave. NW, Largo, FL 33770 | Kmodom57@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-081",
+      "boatNumber": "",
+      "phone": "8505193655",
+      "category": "Recreation",
+      "telephone": "8505193655",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ace",
+        "last": "Haddock"
+      },
+      "racer2": {
+        "first": "Seth Codpiece",
+        "last": "Coffin"
+      },
+      "notes": "Seth Codpiece Coffin, Sopchoppy FL 32358 | Haddockace@live.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-082",
+      "boatNumber": "",
+      "phone": "3524464401",
+      "category": "Recreation",
+      "telephone": "3524464401",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Shane",
+        "last": "Trachy"
+      },
+      "racer2": {
+        "first": "Ian",
+        "last": "Sharkey"
+      },
+      "notes": "20490 se 81st terr inglis fl, 34449 | Trachy13@Gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-083",
+      "boatNumber": "",
+      "phone": "352160764",
+      "category": "Women's",
+      "telephone": "352160764",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Cassie",
+        "last": "Miles"
+      },
+      "racer2": {
+        "first": "Ruth",
+        "last": "King"
+      },
+      "notes": "3312 Nw 36th St, 32605 | ccaddie15@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-084",
+      "boatNumber": "",
+      "phone": "6366341298",
+      "category": "Recreation",
+      "telephone": "6366341298",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Katie",
+        "last": "Norton"
+      },
+      "racer2": {
+        "first": "Jared",
+        "last": "Fitzgerald"
+      },
+      "notes": "29 Bunker Drive, O'Fallon, MO 63366 | kpalmeredu@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-085",
+      "boatNumber": "",
+      "phone": "8139559455",
+      "category": "Parent/Youth",
+      "telephone": "8139559455",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ashley",
+        "last": "Trachy"
+      },
+      "racer2": {
+        "first": "Sadie",
+        "last": "Richardson"
+      },
+      "notes": "154 Hammock Rd, 34449 | Andrea.gracey3@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-086",
+      "boatNumber": "",
+      "phone": "8139559455",
+      "category": "Parent/Youth",
+      "telephone": "8139559455",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Andy",
+        "last": "Gracey"
+      },
+      "racer2": {
+        "first": "Sara",
+        "last": "Richardson"
+      },
+      "notes": "154 Hammock Rd, 34449 | Andrea.gracey3@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-087",
+      "boatNumber": "",
+      "phone": "3525865364",
+      "category": "Recreation",
+      "telephone": "3525865364",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Joseph",
+        "last": "Canova"
+      },
+      "racer2": {
+        "first": "Titus",
+        "last": "Smith"
+      },
+      "notes": "372 E Joshua Ct., Hernando FL 34442 | canovajoseph17@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-088",
+      "boatNumber": "",
+      "phone": "8134463658",
+      "category": "Paddle Board",
+      "telephone": "8134463658",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Krisztian",
+        "last": "fedor"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "905 hillside drive, Lutz fl 33549 | Krisztfedor@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-089",
+      "boatNumber": "",
+      "phone": "8135281829",
+      "category": "Men's Kayak",
+      "telephone": "8135281829",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Shaun",
+        "last": "Murphy"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "22929 sterling mannor loop, Lutz fl 33549 | Krisztfedor@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-090",
+      "boatNumber": "",
+      "phone": "8137678728",
+      "category": "Men's Kayak",
+      "telephone": "8137678728",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Patrick",
+        "last": "Lowder"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "18308 oakdale rd, Odessa | Krisztfedor@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-091",
+      "boatNumber": "",
+      "phone": "7729791724",
+      "category": "Women's",
+      "telephone": "7729791724",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Camil Coss",
+        "last": "Flores"
+      },
+      "racer2": {
+        "first": "Lola",
+        "last": "Aronovitz"
+      },
+      "notes": "1320 NW 3rd Ave, Unit 218 | camilisabelcossflores14@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-092",
+      "boatNumber": "",
+      "phone": "3526010392",
+      "category": "Experienced",
+      "telephone": "3526010392",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Austin",
+        "last": "Fowler"
+      },
+      "racer2": {
+        "first": "Brett",
+        "last": "Hendricks"
+      },
+      "notes": "24 our rd, Inglis, Fl, 34449 | austinfowler66@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-093",
+      "boatNumber": "",
+      "phone": "3522214659",
+      "category": "Mixed",
+      "telephone": "3522214659",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Brett",
+        "last": "Hanchey"
+      },
+      "racer2": {
+        "first": "Gretchen",
+        "last": "McCarthy"
+      },
+      "notes": "14031 NE 35th Ave, Chiefland, FL 32626 | BHanchey86@hotmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-094",
+      "boatNumber": "",
+      "phone": "9419287313",
+      "category": "Recreation",
+      "telephone": "9419287313",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Leonardo",
+        "last": "Lunardi"
+      },
+      "racer2": {
+        "first": "Bruno",
+        "last": "Lunardi"
+      },
+      "notes": "811 Hammockwood Court, Sarasota | leonardo@lunardi.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-095",
+      "boatNumber": "",
+      "phone": "3524226437",
+      "category": "Paddle Board",
+      "telephone": "3524226437",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Elisha",
+        "last": "Bragdon"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "1350 ne 7th ave, 34428 | elishagibsonscuba@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-096",
+      "boatNumber": "",
+      "phone": "7542101023",
+      "category": "Recreation",
+      "telephone": "7542101023",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Tomas",
+        "last": "Bernal"
+      },
+      "racer2": {
+        "first": "Omar",
+        "last": ""
+      },
+      "notes": "3427 SW 20th Ave, Gainesville, FL, 32607 | tombernt2006@hotmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-097",
+      "boatNumber": "",
+      "phone": "3528722566",
+      "category": "Women's",
+      "telephone": "3528722566",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "HEATHER",
+        "last": "Stancil"
+      },
+      "racer2": {
+        "first": "Charlotte",
+        "last": "Dow"
+      },
+      "notes": "353 nw 220th Ave, DUNNELLON | hforsythenp@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-098",
+      "boatNumber": "",
+      "phone": "3092124036",
+      "category": "Women's Kayak",
+      "telephone": "3092124036",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Cyndi",
+        "last": "Wilsdorf"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "132 sara st, East Peoria IL 61611 | mmahk@comcast.net",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-099",
+      "boatNumber": "",
+      "phone": "2152062605",
+      "category": "Women's Kayak",
+      "telephone": "2152062605",
+      "paidStatus": "Paid",
+      "checkedIn": false,
+      "racer1": {
+        "first": "WENDY",
+        "last": "GUNKEL"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "25645 Shad Rd, Astor | Skywen135@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-100",
+      "boatNumber": "",
+      "phone": "8027607524",
+      "category": "Senior Kayak",
+      "telephone": "8027607524",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "gary",
+        "last": "koch"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "6760 N Lecanto hwy lot 737, Beverly Hills | vtgary43x@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-101",
+      "boatNumber": "",
+      "phone": "8302377498",
+      "category": "Paddle Board",
+      "telephone": "8302377498",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "David",
+        "last": "Trotter"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "3257 Oak Garden Dr, Valdosta, GA 31605 | dmtndan@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-102",
+      "boatNumber": "",
+      "phone": "8138340842",
+      "category": "Women's Kayak",
+      "telephone": "8138340842",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Katie",
+        "last": "Opp"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "2511 Alvarez Rd, 33618 | katbee320@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-103",
+      "boatNumber": "",
+      "phone": "3053181015",
+      "category": "Parent/Youth",
+      "telephone": "3053181015",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Ksenia",
+        "last": "McKinney"
+      },
+      "racer2": {
+        "first": "Paxton",
+        "last": "McKinney"
+      },
+      "notes": "8535 Congressional Dr, 32312-4019 | billm@tflauto.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-104",
+      "boatNumber": "",
+      "phone": "3053181015",
+      "category": "Parent/Youth",
+      "telephone": "3053181015",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Bill",
+        "last": "McKinney"
+      },
+      "racer2": {
+        "first": "Ella",
+        "last": "McKinney"
+      },
+      "notes": "8535 Congressional Dr, 32312-4019 | billm@tflauto.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-105",
+      "boatNumber": "",
+      "phone": "6015803773",
+      "category": "Paddle Board",
+      "telephone": "6015803773",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Larry",
+        "last": "Rayburn"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "1112 N 7th Avenue, Laurel MS 39440 | Larryrayburnjr@icloud.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-106",
+      "boatNumber": "",
+      "phone": "3522012468",
+      "category": "Men's Kayak",
+      "telephone": "3522012468",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Robert",
+        "last": "Norman"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "4363 E Taper Street, 34453 | robertnorman142@yahoo.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-107",
+      "boatNumber": "",
+      "phone": "8646502652",
+      "category": "Men's Kayak",
+      "telephone": "8646502652",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Nathan",
+        "last": "Sims"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "629 Gran Kaymen Way, 33572 | nate.edward.sims.83@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-108",
+      "boatNumber": "",
+      "phone": "8646502652",
+      "category": "Men's Kayak",
+      "telephone": "8646502652",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Nate",
+        "last": "Sims"
+      },
+      "racer2": {
+        "first": "",
+        "last": ""
+      },
+      "notes": "629 Gran Kaymen Way, 33572 | Paddlesuprentals@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "id": "team-109",
+      "boatNumber": "",
+      "phone": "7147182169",
+      "category": "Recreation",
+      "telephone": "7147182169",
+      "paidStatus": "Awaiting Payment",
+      "checkedIn": false,
+      "racer1": {
+        "first": "Chad",
+        "last": "Allen"
+      },
+      "racer2": {
+        "first": "Tim",
+        "last": "Jones"
+      },
+      "notes": "12557 N Water Way, DUNNELLON | c.everett.allen@gmail.com",
+      "updatedAt": "2026-04-15T00:00:00.000Z"
+    }
+  ]
+}
